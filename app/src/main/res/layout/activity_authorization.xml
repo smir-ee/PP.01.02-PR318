@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".AuthorizationActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="68dp"
+        android:textSize="64sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/monsterrat_bold"
+        android:text="SuperFit"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="50dp"
+        android:paddingTop="200dp">
+        <LinearLayout
+            android:id="@+id/block1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="40dp"
+            android:paddingBottom="40dp"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="UserName"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+            <TextView
+                android:id="@+id/sign_in_btn"
+                android:paddingLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:drawableRight="@drawable/arrow"
+                android:textSize="24sp"
+                android:fontFamily="@font/monsterrat_bold"
+                android:text="Sign In"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/sign_up_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:drawableRight="@drawable/arrow"
+                android:textSize="24sp"
+                android:fontFamily="@font/monsterrat_bold"
+                android:text="Sign Up"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
