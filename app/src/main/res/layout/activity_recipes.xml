@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Recipes">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/recipes_hat"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/vector"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:rotation="180"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recipes"
+                    android:textSize="24dp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edit_text_shape"
+                android:layout_marginTop="15dp"
+                android:hint="Search..."
+                android:paddingLeft="20dp"
+                android:textSize="14dp"
+                android:textColorHint="#666666"
+                android:textColor="#666666"
+                android:fontFamily="@font/montserrat_light"
+                android:layout_marginHorizontal="15dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:background="@drawable/recipe_button"
+                    android:textSize="12sp"
+                    android:textColor="#FFFFFF"
+                    android:text="Balanced"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/montserrat_light"
+                    android:layout_marginRight="55dp"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:textSize="12sp"
+                    android:textColor="#FFFFFF"
+                    android:text="High-Fiber"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/montserrat_light"
+                    android:background="@drawable/recipe_button"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:textSize="12sp"
+                    android:textColor="#FFFFFF"
+                    android:text="High-Protein"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/montserrat_light"
+                    android:background="@drawable/recipe_button"
+                    android:layout_marginLeft="55dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

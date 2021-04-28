@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:background="@drawable/splash"
+    tools:context=".SignUpActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SuperFit"
+            android:textColor="#FFFFFF"
+            android:textSize="64sp"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/montserrat_bold"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="155dp"
+            android:layout_marginHorizontal="60dp"
+            android:inputType="text"
+            android:textSize="18sp"
+            android:hint="UserName"
+            android:textColorHint="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/montserrat_medium"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginTop="15dp"
+            android:textSize="18sp"
+            android:hint="Email"
+            android:textColorHint="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/montserrat_medium"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginTop="15dp"
+            android:textSize="18sp"
+            android:inputType="number"
+            android:hint="Code"
+            android:textColorHint="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/montserrat_medium"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginTop="15dp"
+            android:textSize="18sp"
+            android:inputType="number"
+            android:hint="RepeatCode"
+            android:textColorHint="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/montserrat_medium"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:layout_gravity="start" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/vector"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="110dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/vector"
+                android:layout_marginRight="10dp"
+                android:rotation="180"
+                android:onClick="onSignInClick"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="Sign In"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/montserrat_bold"
+                android:onClick="onSignInClick"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
