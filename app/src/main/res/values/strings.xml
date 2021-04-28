@@ -7,4 +7,13 @@
     <string name="email">Email</string>
     <string name="code">Code</string>
     <string name="repeat_code">RepeatCode</string>
+    <string name="my_body">My body</string>
+    <string name="last_exercises">Last exercises</string>
+    <string name="push_ups">Push-Ups</string>
+    <string name="push_ups_content">Push-ups exercise the pectoral muscles, triceps, and anterior deltoids.</string>
+    <string name="plank">Plank</string>
+    <string name="plank_content">The plank strengthens the abdominals, back and shoulders.</string>
+    <string name="recipes">Recipes   </string>
+    <string name="sign_out">   Sign Out</string>
+
 </resources>
