@@ -30,7 +30,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="230dp">
             <EditText
-                android:id="@+id/username"
+                android:id="@+id/usernameaut"
                 android:layout_width="280dp"
                 android:layout_height="42dp"
                 android:ems="10"

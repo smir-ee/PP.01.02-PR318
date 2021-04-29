@@ -56,7 +56,10 @@ public class registration_activity extends AppCompatActivity {
         database.insert(Based.TABLE_CONTACTS, null, contentValues);
     }
     public void Sign_up_reg(View view){
-        registration();
+        if (validation.validate()){
+
+            registration();
+        }
 //        Intent intent = new Intent(registration_activity.this, main_activity.class);
 //        startActivity(intent);
     }
