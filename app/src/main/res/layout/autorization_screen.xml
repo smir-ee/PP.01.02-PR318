@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bk_cs"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/superfit"
+            android:layout_width="284dp"
+            android:layout_height="78dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="top"
+            android:text="@string/superfittxt"
+            android:textAppearance="@style/superfit" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginTop="230dp">
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="280dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="@string/usernametxt"
+                android:textColorHint="#FFFFFF"
+                android:backgroundTint="#FFF"
+                android:textColor="#fff"
+                android:fontFamily="@font/montserrat_light"
+                android:textAppearance="@style/username"
+                />
+            <!-- Sign In -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:onClick="Sign_in_aut">
+                <TextView
+                    android:id="@+id/sign_in"
+                    android:layout_width="88dp"
+                    android:layout_height="29dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="top"
+                    android:text="@string/sign_intxt"
+                    android:textAppearance="@style/sign_in"
+                    android:fontFamily="@font/montserrat_bold"/>
+
+                <!-- Vector -->
+                <View
+                    android:id="@+id/vector"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/vector" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- Sign Up -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="170dp"
+            android:onClick="Sign_up_aut"
+            >
+            <TextView
+                android:id="@+id/sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/sign_uptxt"
+                android:textAppearance="@style/sign_up"
+                android:gravity="top"
+                android:fontFamily="@font/montserrat_bold"/>
+            <!-- Vector -->
+            <View
+                android:id="@+id/vector1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/vector"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

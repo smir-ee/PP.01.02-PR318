@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="superfit">
+        <item name="android:textSize">63sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+    <style name="username">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="hintTextColor">#FFFFFF</item>
+    </style>
+    <style name="sign_in">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+    <style name="sign_up">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+    <style name="some_id">
+        <item name="android:textSize">64sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="fontFamily">@font/montserrat_light</item>
+    </style>
+    <style name="vasya_mail_">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+    <style name="superfit_main">
+        <item name="android:textSize">50sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+    <style name="my_body">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+    <style name="detail">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#C6C6C6</item>
+    </style>
+    <style name="see_all">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#706E6E</item>
+    </style>
+    <style name="push_ups_ex">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#C6C6C6</item>
+    </style>
+    <style name="recipes">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+    <style name="search">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#993C3C43</item>
+    </style>
+</resources>

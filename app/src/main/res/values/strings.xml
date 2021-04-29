@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">SuperFit</string>
+    <string name="superfittxt">SuperFit</string>
+    <string name="usernametxt">UserName</string>
+    <string name="emailtxt">Email</string>
+    <string name="codetxt">Code</string>
+    <string name="repeat_code_txt">RepeatCode</string>
+    <string name="sign_intxt">Sign In</string>
+    <string name="sign_uptxt">Sign Up</string>
+    <string name="my_bodytxt">My body</string>
+    <string name="detailtxt">Details</string>
+    <string name="last_exercisestxt">Last exercies</string>
+    <string name="see_alltxt">See all</string>
+    <string name="recipestxt">Recipes</string>
+    <string name="sign_outtxt">Sign Out</string>
+    <string name="searchtxt">Search...</string>
+    <string name="not_empty_name_error">CUMNAME</string>
+    <string name="not_empty_email_error">CUMMAIL</string>
+    <string name="passwords_not_confirm">CUMPASS</string>
+    <string name="not_valid_code">CUMCODE</string>
+
+</resources>
