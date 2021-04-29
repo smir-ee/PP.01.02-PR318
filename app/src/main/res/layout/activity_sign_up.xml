@@ -23,6 +23,7 @@
             android:fontFamily="@font/montserrat_bold"/>
 
         <EditText
+            android:id="@+id/UserName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="155dp"
@@ -36,6 +37,7 @@
             android:fontFamily="@font/montserrat_medium"/>
 
         <EditText
+            android:id="@+id/Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -49,6 +51,7 @@
             android:fontFamily="@font/montserrat_medium"/>
 
         <EditText
+            android:id="@+id/Code"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="60dp"
@@ -62,6 +65,7 @@
             android:fontFamily="@font/montserrat_medium"/>
 
         <EditText
+            android:id="@+id/RepeatCode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="60dp"
@@ -88,12 +92,14 @@
                 android:fontFamily="@font/montserrat_bold"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp"
+                android:onClick="registerClick"
                 android:layout_gravity="start" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/vector"
+                android:onClick="registerClick"
                 android:layout_marginLeft="10dp"/>
         </LinearLayout>
 

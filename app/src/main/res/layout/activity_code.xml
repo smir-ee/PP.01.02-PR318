@@ -7,6 +7,17 @@
     android:background="@drawable/splash"
     tools:context=".CodeActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/vector"
+        android:rotation="180"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:onClick="backClick"
+        android:scaleX="1.2"
+        android:scaleY="1.2"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,6 +34,7 @@
             android:layout_gravity="center_horizontal"/>
 
         <TextView
+            android:id="@+id/emailCodeAc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#FFFFFF"
@@ -45,17 +57,20 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/b1"
                     android:layout_width="78dp"
                     android:layout_height="78dp"
                     android:layout_margin="10dp"
                     android:gravity="center"
                     android:background="@drawable/button"
                     android:fontFamily="@font/montserrat_light"
+                    android:onClick="onButtonClick"
                     android:text="1"
                     android:textColor="@color/white"
                     android:textSize="64dp" />
 
                 <Button
+                    android:id="@+id/b2"
                     android:layout_width="78dp"
                     android:layout_height="78dp"
                     android:layout_margin="10dp"
@@ -64,17 +79,20 @@
                     android:gravity="center"
                     android:background="@drawable/button"
                     android:fontFamily="@font/montserrat_light"
+                    android:onClick="onButtonClick"
                     android:text="2"
                     android:textColor="@color/white"
                     android:textSize="64dp" />
 
                 <Button
+                    android:id="@+id/b3"
                     android:layout_width="78dp"
                     android:layout_height="78dp"
                     android:layout_margin="10dp"
                     android:gravity="center"
                     android:background="@drawable/button"
                     android:fontFamily="@font/montserrat_light"
+                    android:onClick="onButtonClick"
                     android:text="3"
                     android:textColor="@color/white"
                     android:textSize="64dp" />
@@ -88,23 +106,27 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/b4"
                     android:layout_width="78dp"
                     android:layout_height="78dp"
                     android:layout_margin="10dp"
                     android:gravity="center"
                     android:background="@drawable/button"
                     android:fontFamily="@font/montserrat_light"
+                    android:onClick="onButtonClick"
                     android:text="4"
                     android:textColor="@color/white"
                     android:textSize="64dp" />
 
                 <Button
+                    android:id="@+id/b5"
                     android:layout_width="78dp"
                     android:layout_height="78dp"
                     android:layout_margin="10dp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:fontFamily="@font/montserrat_light"
+                    android:onClick="onButtonClick"
                     android:gravity="center"
                     android:background="@drawable/button"
                     android:text="5"
@@ -112,12 +134,14 @@
                     android:textSize="64dp" />
 
                 <Button
+                    android:id="@+id/b6"
                     android:layout_width="78dp"
                     android:layout_height="78dp"
                     android:layout_margin="10dp"
                     android:gravity="center"
                     android:background="@drawable/button"
                     android:fontFamily="@font/montserrat_light"
+                    android:onClick="onButtonClick"
                     android:text="6"
                     android:textColor="@color/white"
                     android:textSize="64dp" />
@@ -131,19 +155,20 @@
                 android:orientation="horizontal">
 
                 <Button
-                    style="@style/Widget.AppCompat.Button"
+                    android:id="@+id/b7"
                     android:layout_width="78dp"
                     android:layout_height="78dp"
                     android:layout_margin="10dp"
                     android:gravity="center"
                     android:background="@drawable/button"
                     android:fontFamily="@font/montserrat_light"
+                    android:onClick="onButtonClick"
                     android:text="7"
                     android:textColor="@color/white"
                     android:textSize="64dp" />
 
                 <Button
-                    style="@style/Widget.AppCompat.Button"
+                    android:id="@+id/b8"
                     android:layout_width="78dp"
                     android:layout_height="78dp"
                     android:layout_margin="10dp"
@@ -152,17 +177,20 @@
                     android:gravity="center"
                     android:background="@drawable/button"
                     android:fontFamily="@font/montserrat_light"
+                    android:onClick="onButtonClick"
                     android:text="8"
                     android:textColor="@color/white"
                     android:textSize="64dp" />
 
                 <Button
+                    android:id="@+id/b9"
                     android:layout_width="78dp"
                     android:layout_height="78dp"
                     android:layout_margin="10dp"
                     android:gravity="center"
                     android:background="@drawable/button"
                     android:fontFamily="@font/montserrat_light"
+                    android:onClick="onButtonClick"
                     android:text="9"
                     android:textColor="@color/white"
                     android:textSize="64dp" />

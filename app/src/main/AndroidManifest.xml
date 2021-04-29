@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/app_icons_foreground"
         android:supportsRtl="true"
         android:theme="@style/Theme.SuperFit">
-        <activity android:name=".Recipes"></activity>
+        <activity android:name=".Recipes" />
         <activity android:name=".MainScreen" />
         <activity android:name=".CodeActivity" />
         <activity android:name=".SignUpActivity" />

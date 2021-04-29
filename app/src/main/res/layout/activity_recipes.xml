@@ -96,7 +96,8 @@
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="25dp"/>
+            android:layout_marginTop="25dp"
+            tools:listitem="@layout/recipes_item" />
 
     </LinearLayout>
 </RelativeLayout>
