@@ -8,6 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/appicon"
         android:supportsRtl="true"
+        android:fitsSystemWindows="true"
         android:theme="@style/Theme.SuperFit">
         <activity android:name=".MainScreen">
             <intent-filter>
