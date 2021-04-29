@@ -9,4 +9,17 @@
         <item name="android:gravity">center</item>
         <item name="android:textAppearance">@style/superfit</item>
     </style>
+
+    <style name="radioButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/radio_button_bg</item>
+        <item name="android:button">@color/empty</item>
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/rb_text_color</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
 </resources>

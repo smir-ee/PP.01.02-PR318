@@ -15,5 +15,8 @@
     <string name="plank_content">The plank strengthens the abdominals, back and shoulders.</string>
     <string name="recipes">Recipes   </string>
     <string name="sign_out">   Sign Out</string>
+    <string name="high_protein">High-Protein</string>
+    <string name="recipe">Recipe</string>
+    <string name="see_all">See all</string>
 
 </resources>

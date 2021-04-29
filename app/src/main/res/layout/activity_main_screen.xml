@@ -156,12 +156,10 @@
 
     </LinearLayout>
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
+        android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -169,8 +167,22 @@
             android:textColor="@color/black"
             android:fontFamily="@font/montserrat_bold"
             android:textSize="24sp"
+            android:layout_weight="1"
             android:layout_marginStart="16dp">
         </TextView>
+        <TextView
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="@string/see_all"
+            android:layout_marginEnd="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
             android:layout_margin="16dp"
