@@ -5,8 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.superfit.R;
 
@@ -41,9 +44,16 @@ public class AllExercises extends AppCompatActivity {
             data.add(new ExerciseItem(exercises[i], descriptions[i], images[i]));
         }
 
-
         exerciseAdapter = new ExerciseAdapter(this, R.layout.exercises_item, data);
         listView.setAdapter(exerciseAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+        });
+
     }
 
     public void onBackClick(View v){

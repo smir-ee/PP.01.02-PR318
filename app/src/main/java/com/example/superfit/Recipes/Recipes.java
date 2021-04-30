@@ -1,8 +1,10 @@
-package com.example.superfit;
+package com.example.superfit.Recipes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.superfit.R;
 
 public class Recipes extends AppCompatActivity {
 

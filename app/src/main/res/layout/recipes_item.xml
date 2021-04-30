@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginVertical="25dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="25dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
@@ -48,16 +48,37 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="3dp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="290g protein • 325g fat • 746g carbs"
-                android:textSize="12sp"
-                android:fontFamily="@font/montserrat_light"
-                android:textColor="#666666"
+                android:orientation="horizontal"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="8dp"/>
+                android:layout_marginTop="8dp">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="290g protein"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/montserrat_light"
+                    android:textColor="#666666" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" • 325g fat • "
+                    android:textSize="12sp"
+                    android:fontFamily="@font/montserrat_light"
+                    android:textColor="#666666" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="746g carbs"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/montserrat_light"
+                    android:textColor="#666666" />
+
+
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>
