@@ -22,7 +22,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/arrow_back"
-                android:background="@color/empty" />
+                android:background="@color/empty"
+                android:onClick="onClickBack"/>
             <TextView
                 android:textSize="24sp"
                 android:layout_marginStart="10dp"
@@ -73,10 +74,10 @@
         </LinearLayout>
 
     </LinearLayout>
-    <view class="androidx.appcompat.app.AlertController$RecycleListView"
+    <ListView
+        android:clickable="true"
+        android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </view>
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
