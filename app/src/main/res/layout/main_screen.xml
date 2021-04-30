@@ -5,183 +5,51 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="#FFF">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/chel_image"
-                />
-
-            <TextView
-                android:id="@+id/superfit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="85dp"
-                android:layout_marginTop="50dp"
-                android:fontFamily="@font/montserrat_bold"
-                android:text="@string/superfittxt"
-                android:textAppearance="@style/superfit_main" />
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/line"
-                android:layout_marginTop="145dp"/>
-        </RelativeLayout>
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFF"
             android:orientation="vertical">
-            <!-- My body -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginLeft="15dp"
-                android:fontFamily="@font/montserrat_bold"
-                android:text="@string/my_bodytxt"
-                android:textAppearance="@style/recipes" />
-            <!-- My body body-->
-            <androidx.cardview.widget.CardView
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                app:cardBackgroundColor="#282828"
-                app:cardCornerRadius="8dp">
+                android:orientation="vertical">
 
-                <LinearLayout
+                <ImageView
+                    android:id="@+id/imageView"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/chel_image" />
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:scaleType="centerCrop"
-                        android:foreground="@drawable/line_flex"
-                        android:src="@drawable/flex" />
+                <TextView
+                    android:id="@+id/superfit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="85dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/superfittxt"
+                    android:textAppearance="@style/superfit_main" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.8"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.4"
-                            android:orientation="vertical">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="12dp"
-                                android:layout_weight="1">
-
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:background="@drawable/weight" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:fontFamily="@font/montserrat_bold"
-                                    android:text="--"
-                                    android:textColor="@color/white" />
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:fontFamily="@font/montserrat_bold"
-                                    android:text="kg"
-                                    android:textColor="@color/white" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="6dp"
-                                android:layout_weight="1">
-
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:background="@drawable/height" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="9dp"
-                                    android:fontFamily="@font/montserrat_bold"
-                                    android:text="--"
-                                    android:textColor="@color/white" />
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="9dp"
-                                    android:fontFamily="@font/montserrat_bold"
-                                    android:text="cm"
-                                    android:textColor="@color/white" />
-                            </LinearLayout>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginBottom="8dp"
-                            android:layout_weight="0.6"
-                            android:gravity="bottom"
-                            android:orientation="vertical">
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="15dp">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:fontFamily="@font/montserrat_bold"
-                                    android:text="@string/detailtxt"
-                                    android:textAppearance="@style/detail" />
-
-                                <ImageView
-                                    android:layout_width="22dp"
-                                    android:layout_height="16dp"
-                                    android:layout_gravity="bottom"
-                                    android:src="@drawable/vector"
-                                    android:tint="#C6C6C6" />
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="145dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/line" />
+            </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
                 <!-- My body -->
                 <TextView
                     android:layout_width="wrap_content"
@@ -189,216 +57,360 @@
                     android:layout_gravity="left"
                     android:layout_marginLeft="15dp"
                     android:fontFamily="@font/montserrat_bold"
-                    android:text="@string/last_exercisestxt"
-                    android:textAppearance="@style/my_body" />
+                    android:text="@string/my_bodytxt"
+                    android:textAppearance="@style/recipes" />
+                <!-- My body body-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    app:cardBackgroundColor="#282828"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:foreground="@drawable/line_flex"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/flex" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.8"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.4"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_weight="1">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:background="@drawable/weight" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:fontFamily="@font/montserrat_bold"
+                                        android:text="--"
+                                        android:textColor="@color/white" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:fontFamily="@font/montserrat_bold"
+                                        android:text="kg"
+                                        android:textColor="@color/white" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_weight="1">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:background="@drawable/height" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="9dp"
+                                        android:fontFamily="@font/montserrat_bold"
+                                        android:text="--"
+                                        android:textColor="@color/white" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="9dp"
+                                        android:fontFamily="@font/montserrat_bold"
+                                        android:text="cm"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="8dp"
+                                android:layout_weight="0.6"
+                                android:gravity="bottom"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/montserrat_bold"
+                                        android:text="@string/detailtxt"
+                                        android:textAppearance="@style/detail" />
+
+                                    <ImageView
+                                        android:layout_width="22dp"
+                                        android:layout_height="16dp"
+                                        android:layout_gravity="bottom"
+                                        android:src="@drawable/vector"
+                                        android:tint="#C6C6C6" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="right"
-                    android:layout_marginRight="15dp">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!-- My body -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="15dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/last_exercisestxt"
+                        android:textAppearance="@style/my_body" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="15dp"
+                        android:gravity="right">
+
                         <TextView
                             android:id="@+id/see_all"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
                             android:fontFamily="@font/montserrat_bold"
                             android:text="@string/see_alltxt"
-                            android:textAppearance="@style/see_all"
-                            android:layout_gravity="bottom"
-                            />
+                            android:textAppearance="@style/see_all" />
+                    </LinearLayout>
+
+
                 </LinearLayout>
 
-
-            </LinearLayout>
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginBottom="5dp"
-                app:cardBackgroundColor="#282828"
-                app:cardCornerRadius="8dp">
-
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="wrap_content"
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:scaleType="centerCrop"
-                        android:foreground="@drawable/line_flex"
-                        android:src="@drawable/flex" />
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardBackgroundColor="#282828"
+                    app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.8"
-                        android:orientation="vertical">
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:foreground="@drawable/line_flex"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/flex" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="0.4"
+                            android:layout_weight="0.8"
                             android:orientation="vertical">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:fontFamily="@font/montserrat_bold"
-                                    android:text="TEST"
-                                    android:textColor="@color/white" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_marginTop="6dp"
-                                android:layout_weight="1">
+                                android:layout_weight="0.4"
+                                android:orientation="vertical">
 
-                                <TextView
-                                    android:layout_width="wrap_content"
+                                <LinearLayout
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:layout_marginRight="15dp"
-                                    android:textAppearance="@style/push_ups_ex"
-                                    android:fontFamily="@font/montserrat_light"
-                                    android:text="Push-ups exercise the pectoral muscles, triceps, and anterior deltoids." />
+                                    android:layout_marginTop="10dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:fontFamily="@font/montserrat_bold"
+                                        android:text="TEST"
+                                        android:textColor="@color/white" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="15dp"
+                                        android:fontFamily="@font/montserrat_light"
+                                        android:text="Push-ups exercise the pectoral muscles, triceps, and anterior deltoids."
+                                        android:textAppearance="@style/push_ups_ex" />
+                                </LinearLayout>
                             </LinearLayout>
+
+
                         </LinearLayout>
-
-
                     </LinearLayout>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginBottom="5dp"
-                app:cardBackgroundColor="#282828"
-                app:cardCornerRadius="8dp">
+                </androidx.cardview.widget.CardView>
 
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:scaleType="centerCrop"
-                        android:foreground="@drawable/line_flex"
-                        android:src="@drawable/flex" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardBackgroundColor="#282828"
+                    app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.8"
-                        android:orientation="vertical">
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:foreground="@drawable/line_flex"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/flex" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="0.4"
+                            android:layout_weight="0.8"
                             android:orientation="vertical">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:fontFamily="@font/montserrat_bold"
-                                    android:text="TEST"
-                                    android:textColor="@color/white" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_marginTop="6dp"
-                                android:layout_weight="1">
+                                android:layout_weight="0.4"
+                                android:orientation="vertical">
 
-                                <TextView
-                                    android:layout_width="wrap_content"
+                                <LinearLayout
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:layout_marginRight="15dp"
-                                    android:textAppearance="@style/push_ups_ex"
-                                    android:fontFamily="@font/montserrat_light"
-                                    android:text="Push-ups exercise the pectoral muscles, triceps, and anterior deltoids." />
+                                    android:layout_marginTop="10dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:fontFamily="@font/montserrat_bold"
+                                        android:text="TEST"
+                                        android:textColor="@color/white" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="15dp"
+                                        android:fontFamily="@font/montserrat_light"
+                                        android:text="Push-ups exercise the pectoral muscles, triceps, and anterior deltoids."
+                                        android:textAppearance="@style/push_ups_ex" />
+                                </LinearLayout>
                             </LinearLayout>
+
+
                         </LinearLayout>
-
-
                     </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Recipes -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:onClick="Recipes">
+
+                    <TextView
+                        android:id="@+id/sign_in"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/recipestxt"
+                        android:textAppearance="@style/recipes" />
+                    <!-- Vector -->
+                    <View
+                        android:id="@+id/vector"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/vector_black" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!-- Recipes -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
-                android:onClick="Recipes">
-                <TextView
-                    android:id="@+id/sign_in"
+                <!-- Recipes -->
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/recipestxt"
-                    android:textAppearance="@style/recipes"
-                    android:fontFamily="@font/montserrat_bold" />
-                <!-- Vector -->
-                <View
-                    android:id="@+id/vector"
-                    android:layout_marginLeft="5dp"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/vector_black"
-                    android:layout_gravity="bottom" />
-            </LinearLayout>
-            <!-- Recipes -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
-                android:onClick="Sign_out_main">
-                <View
-                    android:layout_marginRight="5dp"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/vector_black_b"
-                    android:layout_gravity="bottom" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/sign_outtxt"
-                    android:textAppearance="@style/recipes"
-                    android:fontFamily="@font/montserrat_bold" />
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:onClick="Sign_out_main">
 
+                    <View
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/vector_black_b" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/sign_outtxt"
+                        android:textAppearance="@style/recipes" />
+
+                </LinearLayout>
             </LinearLayout>
+
+
         </LinearLayout>
-
-
-    </LinearLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
