@@ -4,9 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.content.Intent;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -14,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.superfit.DB.SignUpContract;
 import com.example.superfit.DB.SignUpDbHelper;
+import com.example.superfit.MainScreen.MainScreen;
 
 public class SignUpActivity extends AppCompatActivity {
 

@@ -3,23 +3,21 @@ package com.example.superfit;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.superfit.DB.SignUpContract;
 import com.example.superfit.DB.SignUpDbHelper;
+import com.example.superfit.MainScreen.MainScreen;
 
 public class CodeActivity extends AppCompatActivity {
 
     TextView email;
-    String e_mail, password;
+    String e_mail, password = "";
     SignUpDbHelper dbHelper;
     Intent intent;
+    int userPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +29,7 @@ public class CodeActivity extends AppCompatActivity {
         email = findViewById(R.id.emailCodeAc);
         e_mail = getIntent().getStringExtra("email");
         dbHelper = new SignUpDbHelper(this);
+        userPassword = getIntent().getExtras().getInt("password");
 
         email.setText(e_mail);
         intent = new Intent(this, MainScreen.class);
@@ -73,20 +72,12 @@ public class CodeActivity extends AppCompatActivity {
         }
 
         if (password.length() == 4){
-            int digitPassword = Integer.parseInt(password);
-            SQLiteDatabase db = dbHelper.getReadableDatabase();
-            String[] select = {SignUpContract.SignUp.COLUMN_CODE};
-            Cursor cursor = db.query(SignUpContract.SignUp.TABLE_NAME, select, null, null, null, null, null);
-            int codeColumnIndex = cursor.getColumnIndex(SignUpContract.SignUp.COLUMN_CODE);
-            while (cursor.moveToNext()){
-                int currentCode = cursor.getInt(codeColumnIndex);
-                if (digitPassword == currentCode){
-                    startActivity(intent);
-                }
-                else {
-                    Toast.makeText(this, "Invalid password", Toast.LENGTH_SHORT).show();
-                }
-                break;
+            if (userPassword == Integer.parseInt(password)){
+                startActivity(intent);
+            }
+            else {
+                Toast.makeText(this, "Invalid password. Correct password is: " + userPassword, Toast.LENGTH_SHORT).show();
+                password = "";
             }
         }
     }

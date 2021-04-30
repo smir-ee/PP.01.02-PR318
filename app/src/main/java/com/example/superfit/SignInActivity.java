@@ -46,21 +46,27 @@ public class SignInActivity extends AppCompatActivity {
     }
 
     public void checkEmail(){
+
         SQLiteDatabase db = dbHelper.getReadableDatabase();
-        String[] select = {SignUpContract.SignUp.COLUMN_EMAIL};
+        String[] select = {SignUpContract.SignUp.COLUMN_EMAIL, SignUpContract.SignUp.COLUMN_CODE};
         Cursor cursor = db.query(SignUpContract.SignUp.TABLE_NAME, select, null, null, null, null, null);
         int emailColumnIndex = cursor.getColumnIndex(SignUpContract.SignUp.COLUMN_EMAIL);
+        int codeColumnIndex = cursor.getColumnIndex(SignUpContract.SignUp.COLUMN_CODE);
+        boolean isCorrect = false;
+
         while (cursor.moveToNext()){
             String currentEmail = cursor.getString(emailColumnIndex);
-            if (userName.getText().toString().equals(currentEmail)){
-                intent.putExtra("email", userName.getText().toString());
-                startActivity(intent);
-                break;
-            }
-            else {
-                Toast.makeText(this, "There is no such Email in our database", Toast.LENGTH_SHORT).show();
-            }
+            int currentPassword = cursor.getInt(codeColumnIndex);
 
+            if (userName.getText().toString().equals(currentEmail)){
+                isCorrect = true;
+                intent.putExtra("email", userName.getText().toString());
+                intent.putExtra("password", currentPassword);
+                startActivity(intent);
+            }
+        }
+        if (!isCorrect){
+            Toast.makeText(this, "There is no such Email in our database", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -68,6 +74,9 @@ public class SignInActivity extends AppCompatActivity {
         if (userName.getText().toString().equals("")){
             Toast.makeText(this, "User Name field is empty", Toast.LENGTH_SHORT).show();
             return false;
+        }
+        if (!userName.getText().toString().contains("@")){
+            Toast.makeText(this, "Email is missing the '@' character", Toast.LENGTH_SHORT).show();
         }
         return true;
     }

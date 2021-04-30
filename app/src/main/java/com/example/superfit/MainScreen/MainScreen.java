@@ -1,14 +1,12 @@
-package com.example.superfit;
+package com.example.superfit.MainScreen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ImageView;
+import android.view.View;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
-
-import jp.wasabeef.glide.transformations.BlurTransformation;
+import com.example.superfit.R;
 
 public class MainScreen extends AppCompatActivity {
 
@@ -17,5 +15,10 @@ public class MainScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
         getSupportActionBar().hide();
+    }
+
+    public void onSeeAllClick(View v){
+        Intent intent = new Intent(this, AllExercises.class);
+        startActivity(intent);
     }
 }
