@@ -38,7 +38,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_bold"
-                    android:text="Cock and Ball Torture"
+                    android:text="Chicken and Dumplings Torture"
                     android:layout_marginTop="4dp"
                     android:textAppearance="@style/recipes_list_name"/>
                 <LinearLayout
