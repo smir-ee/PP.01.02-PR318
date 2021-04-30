@@ -18,6 +18,7 @@
             android:layout_height="wrap_content"
             app:cardCornerRadius="8dp">
             <ImageView
+                android:id="@+id/recipes_item_image"
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:padding="5dp"
@@ -35,6 +36,7 @@
                 android:orientation="vertical"
                 android:layout_weight="0.6">
                 <TextView
+                    android:id="@+id/recipes_item_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_bold"
@@ -46,6 +48,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <TextView
+                        android:id="@+id/recipes_item_kcal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/montserrat_regular"
@@ -64,10 +67,17 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <TextView
+                        android:id="@+id/recipes_item_protein"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="---g"
+                        android:text="---"
+                        android:textAppearance="@style/recipes_list_kcal"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="g"
                         android:textAppearance="@style/recipes_list_kcal"/>
                     <TextView
                         android:layout_marginLeft="5dp"
@@ -77,11 +87,18 @@
                         android:text="protein •"
                         android:textAppearance="@style/recipes_list_kcal" />
                     <TextView
+                        android:id="@+id/recipes_item_fat"
                         android:layout_marginLeft="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="---g"
+                        android:text="---"
+                        android:textAppearance="@style/recipes_list_kcal"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="g"
                         android:textAppearance="@style/recipes_list_kcal"/>
                     <TextView
                         android:layout_marginLeft="5dp"
@@ -91,11 +108,18 @@
                         android:text="fat •"
                         android:textAppearance="@style/recipes_list_kcal" />
                     <TextView
+                        android:id="@+id/recipes_item_carbs"
                         android:layout_marginLeft="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="---g"
+                        android:text="---"
+                        android:textAppearance="@style/recipes_list_kcal"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="g"
                         android:textAppearance="@style/recipes_list_kcal"/>
                     <TextView
                         android:layout_marginLeft="5dp"

@@ -10,6 +10,7 @@ public class splash_activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         Intent intent = new Intent(this, autorization_activity.class);
         startActivity(intent);
         finish();
