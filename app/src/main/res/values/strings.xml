@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SuperFit</string>
+    <string name="push_desc">Push-ups exercise the pectoral muscles, triceps, and anterior deltoids.</string>
+    <string name="plank_desc">The plank strengthens the abdominals, back and shoulders.</string>
+    <string name="squats_desc">Considered a vital exercise for increasing the strength and size of the lower body.</string>
+    <string name="crunch_desc">It involves the entire abs, but primarily it works the rectus abdominis muscle.</string>
+    <string name="running_desc">It develops endurance, strengthens the legs and the cardiovascular system.</string>
+</resources>
