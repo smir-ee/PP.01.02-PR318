@@ -1,6 +1,7 @@
 package com.example.superfit;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -32,5 +33,45 @@ public class Based extends SQLiteOpenHelper {
         db.execSQL("drop table if exists " + TABLE_CONTACTS);
 
         onCreate(db);
+    }
+    public void basedCreate(SQLiteDatabase db){
+        db.execSQL("drop table if exists " + TABLE_CONTACTS);
+
+        onCreate(db);
+    }
+//    public void onTimer(SQLiteDatabase db, int count){
+//        //SELECT name FROM sqlite_master WHERE type='table' AND name='table_name';
+//        //db.execSQL("SELECT " + TABLE_CONTACTS + "(" + ID + " integer primary key," + USERNAME + " text, " + EMAIL + " text, " + CODE + " text" + ")");
+//        //db.execSQL("SELECT count(*) FROM sqlite_master WHERE type='table' AND " + "name= " + tableName, null);
+//        Cursor cursor = db.rawQuery("SELECT count(*) FROM sqlite_master WHERE type='table' AND " +
+//                "name= " + TABLE_CONTACTS, null);
+//        cursor.moveToFirst();
+//        count = cursor.getInt(0);
+//        if (!cursor.isClosed())
+//            cursor.close();
+//    }
+
+//    public void onTimer(SQLiteDatabase db, String name, int s){
+//        if (name != " "){
+//            s = 1;
+//        }
+//        else {
+//            s = 0;
+//        }
+//
+//
+//        //txtData.setText("id: " + item_id + " Имя кота: " + item_content);
+//    }
+    public void onName(SQLiteDatabase db, int id_pos, String name){
+//        db.execSQL("create table " + TABLE_CONTACTS + "(" + ID + " integer primary key," + USERNAME + " text, " + EMAIL + " text, " + CODE + " text" + ")");
+        String query = "SELECT " + Based.ID + ", " + Based.USERNAME + " FROM " + Based.TABLE_CONTACTS;
+        Cursor cursor = db.rawQuery(query, null);
+        cursor.moveToFirst();
+        cursor.moveToPosition(id_pos);
+        //int item_id = cursor.getInt(cursor.getColumnIndex(Based.ID));
+        name = cursor.getString(cursor.getColumnIndex(Based.USERNAME));
+        cursor.close();
+
+        //txtData.setText("id: " + item_id + " Имя кота: " + item_content);
     }
 }

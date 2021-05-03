@@ -20,6 +20,7 @@ public class registration_activity extends AppCompatActivity {
     AwesomeValidation validation;
     EditText etName, etEmail, etCode, etRepeatCode;
     Based based;
+    String name, email, code, Repeatcode;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,23 +33,24 @@ public class registration_activity extends AppCompatActivity {
 
         validation = new AwesomeValidation(ValidationStyle.BASIC);
         based = new Based(this);
+
         validation.addValidation(this, R.id.username, RegexTemplate.NOT_EMPTY, R.string.not_empty_name_error);
         validation.addValidation(this, R.id.email, Patterns.EMAIL_ADDRESS, R.string.not_empty_email_error);
         validation.addValidation(this, R.id.code, R.id.repeatcode, R.string.passwords_not_confirm);
-        validation.addValidation(this, R.id.code, "[1-4]{4}", R.string.not_valid_code);
+        validation.addValidation(this, R.id.code, "[1-9]{4}", R.string.not_valid_code);
 
 
 
     }
     public void registration(){
-        String name = etName.getText().toString();
-        String email = etEmail.getText().toString();
-        String code = etCode.getText().toString();
-        String Repeatcode = etRepeatCode.getText().toString();
+        name = etName.getText().toString();
+        email = etEmail.getText().toString();
+        code = etCode.getText().toString();
+        Repeatcode = etRepeatCode.getText().toString();
 
         SQLiteDatabase database = based.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-
+        //based.onCreate(database);
         contentValues.put(Based.USERNAME, name);
         contentValues.put(Based.EMAIL, email);
         contentValues.put(Based.CODE, code);
@@ -57,14 +59,16 @@ public class registration_activity extends AppCompatActivity {
     }
     public void Sign_up_reg(View view){
         if (validation.validate()){
-
             registration();
+            Intent intent = new Intent(registration_activity.this, main_activity.class);
+            //intent.putExtra("hello", name);
+            startActivity(intent);
         }
-//        Intent intent = new Intent(registration_activity.this, main_activity.class);
-//        startActivity(intent);
+
     }
     public void Sign_in_reg(View view){
         Intent intent = new Intent(registration_activity.this, autorization_activity.class);
         startActivity(intent);
+        finish();
     }
 }
