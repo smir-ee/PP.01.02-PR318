@@ -5,6 +5,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +15,8 @@ import java.util.Random;
 
 public class one_autorization_avtivity extends AppCompatActivity {
     Button bt1, bt2, bt3 , bt4, bt5, bt6, bt7, bt8, bt9;
+    TextView textView;
+    String name, code;
     int[] randomArray;
     int FINAL;
     String FINALM = "1234";
@@ -26,6 +29,14 @@ public class one_autorization_avtivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.one_autorization_screen);
+
+        Bundle arguments = getIntent().getExtras();
+        name = arguments.get("username").toString();
+        textView = (TextView) findViewById(R.id.one_autorization_text);
+        code = arguments.get("code").toString();
+        FINALM = code;
+        textView.setText(name);
+
         bt1 = (Button) findViewById(R.id.aut_bt_1);
         bt2 = (Button) findViewById(R.id.aut_bt_2);
         bt3 = (Button) findViewById(R.id.aut_bt_3);
