@@ -17,6 +17,7 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="8dp">
                 <ImageView
+                    android:id="@+id/recipes_item_image"
                     android:layout_width="72dp"
                     android:layout_height="72dp"/>
             </androidx.cardview.widget.CardView>
@@ -49,13 +50,6 @@
                             android:fontFamily="@font/montserrat_regular"
                             android:textAppearance="@style/recipes_item_text_st"
                             android:text="----"/>
-                        <TextView
-                            android:layout_marginLeft="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrat_regular"
-                            android:textAppearance="@style/recipes_item_text_st"
-                            android:text="kcal"/>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -77,12 +71,6 @@
                             android:textAppearance="@style/recipes_item_text_st"
                             android:text="---"/>
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrat_regular"
-                            android:textAppearance="@style/recipes_item_text_st"
-                            android:text="g"/>
-                        <TextView
                             android:layout_marginLeft="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -98,12 +86,6 @@
                             android:textAppearance="@style/recipes_item_text_st"
                             android:text="---"/>
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrat_regular"
-                            android:textAppearance="@style/recipes_item_text_st"
-                            android:text="g"/>
-                        <TextView
                             android:layout_marginLeft="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -118,12 +100,6 @@
                             android:fontFamily="@font/montserrat_regular"
                             android:textAppearance="@style/recipes_item_text_st"
                             android:text="---"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrat_regular"
-                            android:textAppearance="@style/recipes_item_text_st"
-                            android:text="g"/>
                         <TextView
                             android:layout_marginLeft="5dp"
                             android:layout_width="wrap_content"

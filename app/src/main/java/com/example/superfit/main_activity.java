@@ -22,7 +22,7 @@ public class main_activity extends AppCompatActivity {
         startActivity(intent);
     }
     public void Recipes(View view){
-        Intent intent = new Intent (main_activity.this, recipes_activity.class );
+        Intent intent = new Intent (main_activity.this, ResipesList.class );
         startActivity(intent);
     }
 }

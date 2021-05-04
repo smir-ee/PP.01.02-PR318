@@ -66,24 +66,27 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:button="@drawable/balanced_button"/>
+                    android:button="@drawable/balanced_button"
+                    android:onClick="onClick_balanced"/>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:button="@drawable/high_fiber_button"/>
+                    android:button="@drawable/high_fiber_button"
+                    android:onClick="onClick_highFiber"/>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
-                    android:button="@drawable/high_protein_button"/>
+                    android:button="@drawable/high_protein_button"
+                    android:onClick="onClick_highProtein"/>
             </RadioGroup>
 
         </LinearLayout>
 
     </LinearLayout>
     <ListView
-        android:id="@+id/listViewRecipes"
+        android:id="@+id/lv_recipes_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></ListView>
 </LinearLayout>
