@@ -6,132 +6,134 @@
     android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
-        <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="8dp">
-            <ImageView
-                android:id="@+id/recipes_item_image"
-                android:layout_width="72dp"
-                android:layout_height="72dp"
-                android:padding="5dp"
-                android:background="@drawable/flex"
-                />
-        </androidx.cardview.widget.CardView>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginLeft="16dp">
+            android:layout_margin="15dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp">
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"/>
+            </androidx.cardview.widget.CardView>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_weight="0.6">
-                <TextView
-                    android:id="@+id/recipes_item_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:text="Chicken and Dumplings Torture"
-                    android:layout_marginTop="4dp"
-                    android:textAppearance="@style/recipes_list_name"/>
+                android:layout_marginLeft="16dp">
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="0.6">
                     <TextView
-                        android:id="@+id/recipes_item_kcal"
+                        android:id="@+id/recipes_item_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:text="----"
-                        android:textAppearance="@style/recipes_list_kcal"/>
-                    <TextView
-                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textAppearance="@style/recipes_item_name_st"
+                        android:text="@string/recipes_item_name_txt"
+                        android:layout_marginTop="4dp"/>
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:text="kcal"
-                        android:textAppearance="@style/recipes_list_kcal" />
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/recipes_item_text_kcal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textAppearance="@style/recipes_item_text_st"
+                            android:text="----"/>
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textAppearance="@style/recipes_item_text_st"
+                            android:text="kcal"/>
+                    </LinearLayout>
+
                 </LinearLayout>
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/recipes_item_protein"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:text="---"
-                        android:textAppearance="@style/recipes_list_kcal"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:text="g"
-                        android:textAppearance="@style/recipes_list_kcal"/>
-                    <TextView
-                        android:layout_marginLeft="5dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:text="protein •"
-                        android:textAppearance="@style/recipes_list_kcal" />
-                    <TextView
-                        android:id="@+id/recipes_item_fat"
-                        android:layout_marginLeft="5dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:text="---"
-                        android:textAppearance="@style/recipes_list_kcal"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:text="g"
-                        android:textAppearance="@style/recipes_list_kcal"/>
-                    <TextView
-                        android:layout_marginLeft="5dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:text="fat •"
-                        android:textAppearance="@style/recipes_list_kcal" />
-                    <TextView
-                        android:id="@+id/recipes_item_carbs"
-                        android:layout_marginLeft="5dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:text="---"
-                        android:textAppearance="@style/recipes_list_kcal"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:text="g"
-                        android:textAppearance="@style/recipes_list_kcal"/>
-                    <TextView
-                        android:layout_marginLeft="5dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:text="carbs"
-                        android:textAppearance="@style/recipes_list_kcal" />
-            </LinearLayout>
-
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/recipes_item_text_protein"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textAppearance="@style/recipes_item_text_st"
+                            android:text="---"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textAppearance="@style/recipes_item_text_st"
+                            android:text="g"/>
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textAppearance="@style/recipes_item_text_st"
+                            android:text="protein •"/>
+                        <TextView
+                            android:id="@+id/recipes_item_text_fat"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textAppearance="@style/recipes_item_text_st"
+                            android:text="---"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textAppearance="@style/recipes_item_text_st"
+                            android:text="g"/>
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textAppearance="@style/recipes_item_text_st"
+                            android:text="fat •"/>
+                        <TextView
+                            android:id="@+id/recipes_item_text_carbs"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textAppearance="@style/recipes_item_text_st"
+                            android:text="---"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textAppearance="@style/recipes_item_text_st"
+                            android:text="g"/>
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textAppearance="@style/recipes_item_text_st"
+                            android:text="carbs"/>
+                    </LinearLayout>
+                </LinearLayout>
+        </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-    </LinearLayout>
-</LinearLayout>
 </LinearLayout>
