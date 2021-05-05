@@ -63,7 +63,7 @@ public class ResipesList extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public void onClick_highFiber(View view){
-        parser("https://api.edamam.com/search?q=chicken&app_id=4da5a427&app_key=6dd6f99730da1737e964379d886e607d&diet=high-fiber", recipes);
+        parser("https://api.edamam.com/search?q=chicken&app_id=4da5a427&app_key=6dd6f99730da1737e964379d886e607d&diet=low-carb", recipes);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
