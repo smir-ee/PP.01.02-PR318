@@ -39,7 +39,7 @@ public class Recipe implements Serializable {
     }
 
     public String getKcal() {
-        return kcal.split("\\.")[0];
+        return kcal.split("\\.")[0] + " kcal";
     }
 
     public void setKcal(String kcal) {

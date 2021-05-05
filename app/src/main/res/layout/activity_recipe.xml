@@ -3,48 +3,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MainScreen"
+    tools:context=".RecipeActivity"
     android:background="@color/white"
     android:orientation="vertical">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/recipe"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
+        <ImageView
+            android:id="@+id/image"
+            android:src="@drawable/recipe"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="168sp"/>
         <ImageButton
-            android:layout_width="34dp"
-            android:layout_height="31dp"
-            android:layout_margin="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
             android:background="@color/empty"
             android:src="@drawable/arrow_back" />
+
         <TextView
-            android:textColor="@color/white"
-            android:fontFamily="@font/montserrat"
-            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_bold"
             android:text="@string/recipe"
+            android:textColor="@color/white"
             android:textSize="36sp"
-            android:gravity="top|center"
-            android:layout_weight="1"
-            android:layout_gravity="center" />
+            android:textStyle="bold" />
 
         <LinearLayout
+            android:layout_gravity="bottom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/rectangle_main" />
-    </LinearLayout>
+    </FrameLayout>
 
     <LinearLayout
+        android:layout_weight="3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="16dp"
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/txtLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
@@ -53,6 +59,7 @@
             android:textColor="@color/black" />
 
         <TextView
+            android:id="@id/txtkcal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="kcal"
@@ -60,6 +67,7 @@
             android:layout_marginBottom="10dp"/>
 
         <TextView
+            android:id="@+id/txtproteinFatCarbs"
             android:text="PFC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -72,9 +80,12 @@
             android:fontFamily="@font/montserrat_bold"
             android:textColor="@color/black"/>
         <ListView
+            android:layout_marginTop="16dp"
             android:id="@+id/list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:dividerHeight="4dp"/>
     </LinearLayout>
 
 

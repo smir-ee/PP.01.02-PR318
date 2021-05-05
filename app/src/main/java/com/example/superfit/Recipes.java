@@ -27,7 +27,7 @@ public class Recipes extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipes);
         view = findViewById(R.id.list);
-
+        HideActionBarAndTransparentStatusBar.hide(getWindow());
         AsyncTask.execute(new Runnable() {
             @Override
             public void run() {
@@ -38,17 +38,20 @@ public class Recipes extends AppCompatActivity  {
                     adapter = new RecipeAdapter(getApplicationContext(), list);
 
                     view.setAdapter(adapter);
+                    view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Intent intent = new Intent(getApplicationContext(), RecipeActivity.class);
+                            System.out.println(list.get(position).label);
+                            intent.putExtra("Recipe", list.get(position));
+                            startActivity(intent);
+                        }
+                    });
                 }
             });
             }
         });
-        view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getApplicationContext(), RecipeActivity.class);
-                intent.putExtra("Recipe", list.get(position));
-            }
-        });
+
     }
 
     public void onClickBack(View view) {

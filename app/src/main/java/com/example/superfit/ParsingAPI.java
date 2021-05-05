@@ -19,9 +19,6 @@ import javax.net.ssl.HttpsURLConnection;
 
 class ParsingAPI  {
 
-
-
-
     public static ArrayList<Recipe> parse(){
         ArrayList<Recipe> recipesArray = new ArrayList<>();
         String data = "";
