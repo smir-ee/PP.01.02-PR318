@@ -1,19 +1,23 @@
 package com.example.superfit.Recipes;
 
+import android.graphics.Bitmap;
+import android.widget.ImageView;
+
 public class Recipe {
     private String name;
     private String calories;
     private String protein;
     private String fat;
     private String carbs;
+    private ImageView img;
 
-    public Recipe (String name, String calories, String protein, String fat, String carbs){
+    /*public Recipe (String name, String calories, String protein, String fat, String carbs){
         this.name = name;
         this.calories = calories;
         this.protein = protein;
         this.fat = fat;
         this.carbs = carbs;
-    }
+    }*/
 
     public String getName(){
         return name;
@@ -46,4 +50,7 @@ public class Recipe {
     public void setCarbs(String carbs){
         this.carbs = carbs;
     }
+    /*public void setImage(Bitmap bitmap){
+        img.setImageBitmap(bitmap);
+    }*/
 }

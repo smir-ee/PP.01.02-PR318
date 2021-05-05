@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ListView;
 
 import com.example.superfit.R;
+import com.example.superfit.Recipes.Recipes;
 
 public class MainScreen extends AppCompatActivity {
 
@@ -24,6 +25,11 @@ public class MainScreen extends AppCompatActivity {
 
     public void onSeeAllClick(View v){
         Intent intent = new Intent(this, AllExercises.class);
+        startActivity(intent);
+    }
+
+    public void onRecipesClick(View v){
+        Intent intent = new Intent(this, Recipes.class);
         startActivity(intent);
     }
 }

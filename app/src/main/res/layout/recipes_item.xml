@@ -2,12 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="25dp"
+
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginVertical="15dp"
         android:orientation="horizontal">
 
         <androidx.cardview.widget.CardView
@@ -30,6 +31,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/dishName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Chicken and Dumplings"
@@ -39,6 +41,8 @@
                 android:layout_marginLeft="15dp"/>
 
             <TextView
+
+                android:id="@+id/tvCal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="7177 kcal"
@@ -56,6 +60,7 @@
                 android:layout_marginTop="8dp">
 
                 <TextView
+                    android:id="@+id/tvProt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="290g protein"
@@ -63,6 +68,7 @@
                     android:fontFamily="@font/montserrat_light"
                     android:textColor="#666666" />
                 <TextView
+                    android:id="@+id/tvFat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=" • 325g fat • "
@@ -70,6 +76,7 @@
                     android:fontFamily="@font/montserrat_light"
                     android:textColor="#666666" />
                 <TextView
+                    android:id="@+id/tvCarbs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="746g carbs"

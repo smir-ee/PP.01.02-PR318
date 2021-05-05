@@ -67,6 +67,7 @@
                     android:textSize="12sp"
                     android:textColor="#FFFFFF"
                     android:text="Balanced"
+                    android:onClick="onBalancedClick"
                     android:textAllCaps="false"
                     android:fontFamily="@font/montserrat_light"
                     android:layout_marginRight="55dp"/>
@@ -76,6 +77,7 @@
                     android:textSize="12sp"
                     android:textColor="#FFFFFF"
                     android:text="High-Fiber"
+                    android:onClick="onHighFiberClick"
                     android:textAllCaps="false"
                     android:fontFamily="@font/montserrat_light"
                     android:background="@drawable/recipe_button"/>
@@ -85,6 +87,7 @@
                     android:textSize="12sp"
                     android:textColor="#FFFFFF"
                     android:text="High-Protein"
+                    android:onClick="onHighProteinClick"
                     android:textAllCaps="false"
                     android:fontFamily="@font/montserrat_light"
                     android:background="@drawable/recipe_button"
@@ -94,6 +97,7 @@
         </LinearLayout>
 
         <ListView
+            android:id="@+id/list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="25dp"
