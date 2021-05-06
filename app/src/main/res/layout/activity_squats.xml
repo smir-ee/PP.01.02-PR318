@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#262626"
+    android:gravity="bottom"
+    tools:context=".Exercises.PushUp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:gravity="bottom"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Squats"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="64sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="100dp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="185dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/back_circle"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textColor="#FFFFFF"
+                android:textSize="64sp"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="65dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NEED TO DO"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                android:layout_marginBottom="75dp"
+                android:gravity="center"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_gravity="center_horizontal|bottom" />
+
+        </FrameLayout>
+
+        <Button
+            android:background="@drawable/button_exercise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:text="Finish"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="24dp"
+            android:layout_marginBottom="15dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

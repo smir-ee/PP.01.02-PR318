@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.superfit.R;
 
@@ -37,21 +39,31 @@ public class Recipes extends AppCompatActivity {
     ListView listView;
     Recipe currentRecipe;
     final URL[] url = new URL[3];
+    TextView errorText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipes);
         getSupportActionBar().hide();
+        this.getWindow().getDecorView().setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
 
         data = new ArrayList<>();
         listView = findViewById(R.id.list);
+        errorText = findViewById(R.id.errorText);
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
     }
 
     public void onBalancedClick(View v){
+        errorText.setText("");
         if (adapter != null){
             adapter.clear();
         }
@@ -62,10 +74,11 @@ public class Recipes extends AppCompatActivity {
         if (adapter != null){
             adapter.clear();
         }
-        Parse(2);
+        errorText.setText("There are no recipes available in this category");
     }
 
     public void onHighProteinClick(View v){
+        errorText.setText("");
         if (adapter != null){
             adapter.clear();
         }
@@ -104,24 +117,24 @@ public class Recipes extends AppCompatActivity {
                         JSONObject recipe = (JSONObject) jo.get("recipe");
                         currentRecipe.setName((String) recipe.get("label"));
                         String src = (String) recipe.get("image");
-                        //currentRecipe.setImage(getImageBitmap(src));
+                        currentRecipe.setImage(getImageBitmap(src));
                         JSONObject totalNutrients = (JSONObject) recipe.get("totalNutrients");
                         JSONObject ENERC_KCAL = (JSONObject) totalNutrients.get("ENERC_KCAL");
                         Double enerc_kcal_value = (Double) ENERC_KCAL.get("quantity");
                         String enerc_kcal_unit = (String) ENERC_KCAL.get("unit");
-                        currentRecipe.setCalories(String.valueOf(Math.round(enerc_kcal_value)) + enerc_kcal_unit);
+                        currentRecipe.setCalories(String.valueOf(Math.round(enerc_kcal_value)) + " " + enerc_kcal_unit);
                         JSONObject FAT = (JSONObject) totalNutrients.get("FAT");
                         Double fat_value = (Double) FAT.get("quantity");
                         String fat_unit = (String) FAT.get("unit");
-                        currentRecipe.setFat(String.valueOf(Math.round(fat_value)) + fat_unit);
+                        currentRecipe.setFat(String.valueOf(" • " + Math.round(fat_value)) + fat_unit + " fat • ");
                         JSONObject CHOCDF = (JSONObject) totalNutrients.get("CHOCDF");
                         Double chocdf_value = (Double) CHOCDF.get("quantity");
                         String chocdf_unit = (String) CHOCDF.get("unit");
-                        currentRecipe.setCarbs(String.valueOf(Math.round(chocdf_value)) + chocdf_unit);
+                        currentRecipe.setCarbs(String.valueOf(Math.round(chocdf_value)) + chocdf_unit + " carbs");
                         JSONObject PROCNT = (JSONObject) totalNutrients.get("PROCNT");
                         Double procnt_value = (Double) PROCNT.get("quantity");
                         String procnt_unit = (String) PROCNT.get("unit");
-                        currentRecipe.setProtein(String.valueOf(Math.round(procnt_value)) + procnt_unit);
+                        currentRecipe.setProtein(String.valueOf(Math.round(procnt_value)) + procnt_unit + " protein");
                         data.add(currentRecipe);
                     }
                     runOnUiThread(new Runnable() {

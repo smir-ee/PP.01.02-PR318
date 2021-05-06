@@ -96,11 +96,19 @@
             </LinearLayout>
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/errorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/montserrat_light"/>
+
         <ListView
             android:id="@+id/list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="0dp"
             tools:listitem="@layout/recipes_item" />
 
     </LinearLayout>

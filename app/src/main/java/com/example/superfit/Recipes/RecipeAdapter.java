@@ -41,12 +41,14 @@ public class RecipeAdapter extends ArrayAdapter<Recipe> {
             TextView prot = v.findViewById(R.id.tvProt);
             TextView fat = v.findViewById(R.id.tvFat);
             TextView carbs = v.findViewById(R.id.tvCarbs);
+            ImageView image = v.findViewById(R.id.dishImg);
 
             name.setText(recipe.getName());
             cal.setText(recipe.getCalories());
             prot.setText(recipe.getProtein());
             fat.setText(recipe.getFat());
             carbs.setText(recipe.getCarbs());
+            image.setImageBitmap(recipe.getImage());
         }
         return v;
     }

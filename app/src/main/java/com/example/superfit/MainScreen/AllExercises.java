@@ -6,11 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 
+import com.example.superfit.Exercises.Crunch;
+import com.example.superfit.Exercises.Plank;
+import com.example.superfit.Exercises.PushUp;
+import com.example.superfit.Exercises.Running;
+import com.example.superfit.Exercises.Squats;
 import com.example.superfit.R;
 
 import java.util.ArrayList;
@@ -30,6 +32,7 @@ public class AllExercises extends AppCompatActivity {
     ExerciseAdapter exerciseAdapter;
     ArrayList<ExerciseItem> data;
     ListView listView;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +53,28 @@ public class AllExercises extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+                switch (position){
+                    case 0:
+                        intent = new Intent(AllExercises.this, PushUp.class);
+                        startActivity(intent);
+                        break;
+                    case 1:
+                        intent = new Intent(AllExercises.this, Plank.class);
+                        startActivity(intent);
+                        break;
+                    case 2:
+                        intent = new Intent(AllExercises.this, Squats.class);
+                        startActivity(intent);
+                        break;
+                    case 3:
+                        intent = new Intent(AllExercises.this, Crunch.class);
+                        startActivity(intent);
+                        break;
+                    case 4:
+                        intent = new Intent(AllExercises.this, Running.class);
+                        startActivity(intent);
+                        break;
+                }
             }
         });
 

@@ -3,7 +3,7 @@
     package="com.example.superfit">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +12,12 @@
         android:roundIcon="@mipmap/app_icons_foreground"
         android:supportsRtl="true"
         android:theme="@style/Theme.SuperFit">
-        <activity android:name=".MainScreen.AllExercises"></activity>
+        <activity android:name=".Exercises.Running"></activity>
+        <activity android:name=".Exercises.Crunch" />
+        <activity android:name=".Exercises.Squats" />
+        <activity android:name=".Exercises.Plank" />
+        <activity android:name=".Exercises.PushUp" />
+        <activity android:name=".MainScreen.AllExercises" />
         <activity android:name=".Recipes.Recipes" />
         <activity android:name=".MainScreen.MainScreen" />
         <activity android:name=".CodeActivity" />
