@@ -36,38 +36,7 @@ public class Recipes extends AppCompatActivity  {
         view = findViewById(R.id.list);
         searchView = findViewById(R.id.searchView);
         rgDiets = findViewById(R.id.rgDiets);
-//        rgDiets.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(RadioGroup group, int checkedId) {
-//                System.out.println(checkedId);
-//                switch (checkedId){
-//                    case 1:
-//                        diet = "Balanced";
-//                        break;
-//                    case 2:
-//                        diet = "High-Fiber";
-//                        break;
-//                    case 3:
-//                        diet = "High-Protein";
-//                        break;
-//                }
-//                AsyncTask.execute(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        list = ParsingAPI.parse("chicken", diet);
-//                        runOnUiThread(new Runnable() {
-//                            @Override
-//                            public void run() {
-//                                adapter = new RecipeAdapter(getApplicationContext(), list);
-//
-//                                view.setAdapter(adapter);
-//                            }
-//                        });
-//                    }
-//                });
-//
-//            }
-//        });
+
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
