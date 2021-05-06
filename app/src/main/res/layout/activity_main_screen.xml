@@ -308,7 +308,8 @@
             android:drawableEnd="@drawable/arrow_res"
             android:fontFamily="@font/montserrat_bold"
             android:gravity="center"
-            android:text="@string/recipes" />
+            android:text="@string/recipes"
+            android:onClick="onClickRecipes"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

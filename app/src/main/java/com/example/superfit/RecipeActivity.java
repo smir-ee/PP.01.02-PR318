@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -28,11 +29,11 @@ public class RecipeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_recipe);
         lvIngredients = findViewById(R.id.list);
 
-
         label = findViewById(R.id.txtLabel);
         kcal = findViewById(R.id.txtkcal);
         pfc = findViewById(R.id.txtproteinFatCarbs);
         image = findViewById(R.id.image);
+
         Bundle bundle = getIntent().getExtras();
         Recipe recipe = (Recipe) bundle.getSerializable("Recipe");
         label.setText(recipe.getLabel());
@@ -43,10 +44,11 @@ public class RecipeActivity extends AppCompatActivity {
         IngredientAdapter adapter = new IngredientAdapter(this, ingredients);
         lvIngredients.setAdapter(adapter);
         HideActionBarAndTransparentStatusBar.hide(getWindow());
+    }
 
-
-
-
+    public void onClickBack(View v){
+        finish();
 
     }
+
 }

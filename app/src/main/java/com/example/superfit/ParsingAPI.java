@@ -19,13 +19,21 @@ import javax.net.ssl.HttpsURLConnection;
 
 class ParsingAPI  {
 
-    public static ArrayList<Recipe> parse(){
+    public static ArrayList<Recipe> parse(String search, String diet){
         ArrayList<Recipe> recipesArray = new ArrayList<>();
+        String link;
         String data = "";
         String appId = "ad859d04";
         String appKey = "b870e5682e6fb9ec059b8adb3ad7745d";
-        String  link = "https://api.edamam.com/search?q=chicken&to=10&app_id=" + appId +"&app_key=" + appKey;
-        System.out.println(link);
+
+        if (search.equals(""))
+            search = "chicken";
+
+        if (diet.equals(""))
+             link = "https://api.edamam.com/search?q=" + search +"&to=30&app_id=" + appId +"&app_key=" + appKey;
+        else
+             link = "https://api.edamam.com/search?q=" + search +"&to=30&app_id=" + appId +"&app_key=" + appKey + "&diet=" + diet;
+
         URL url;
         HttpURLConnection connection;
         try{
@@ -44,7 +52,6 @@ class ParsingAPI  {
                 }
 
                 JSONObject jsonObject = new JSONObject(data);
-                System.out.println("JSON: " + jsonObject.toString());
                 JSONArray recipes = (JSONArray) jsonObject.getJSONArray("hits");
 
 
@@ -68,8 +75,5 @@ class ParsingAPI  {
             e.printStackTrace();
         }
         return recipesArray;
-    }
-    public ParsingAPI() {
-
     }
 }

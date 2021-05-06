@@ -56,19 +56,26 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <RadioGroup
+                android:id="@+id/rgDiets"
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
-                <CheckBox
+                <RadioButton
+                    android:id="@+id/rb1"
                     android:text="Balanced"
-                    style="@style/radioButton"/>
-                <CheckBox
+                    style="@style/radioButton"
+                    android:onClick="onClickRB"/>
+                <RadioButton
+                    android:id="@+id/rb2"
                     android:text="High-Fiber"
-                    style="@style/radioButton"/>
-                <CheckBox
+                    style="@style/radioButton"
+                    android:onClick="onClickRB"/>
+                <RadioButton
+                    android:id="@+id/rb3"
                     android:text="High-Protein"
-                    style="@style/radioButton"/>
+                    style="@style/radioButton"
+                    android:onClick="onClickRB"/>
             </RadioGroup>
 
         </LinearLayout>
