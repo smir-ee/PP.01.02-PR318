@@ -5,17 +5,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class RecipesAdapter extends BaseAdapter {
+public class RecipesAdapter_Item extends BaseAdapter {
     Context ctx;
     LayoutInflater li;
-    ArrayList<Recipe> recipes;
+    ArrayList<Recipe_Item> recipes;
 
-    RecipesAdapter(Context ctx, ArrayList<Recipe> recipes){
+    RecipesAdapter_Item(Context ctx, ArrayList<Recipe_Item> recipes){
         this.ctx = ctx;
         this.recipes = recipes;
         li = (LayoutInflater) this.ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -40,17 +39,12 @@ public class RecipesAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = convertView;
         if (view == null){
-            view = li.inflate(R.layout.recipes_item, parent, false);
+            view = li.inflate(R.layout.recipes_item_screen, parent, false);
         }
 
-        Recipe recipe = (Recipe) getItem(position);
-        ((ImageView) view.findViewById(R.id.recipes_item_image)).setImageBitmap(recipe.getIv_recipe());
-        ((TextView) view.findViewById(R.id.recipes_item_name)).setText(recipe.getTv_recipe_name());
-        ((TextView) view.findViewById(R.id.recipes_item_text_kcal)).setText(recipe.getTv_recipe_value());
-        ((TextView) view.findViewById(R.id.recipes_item_text_protein)).setText(recipe.getTv_protein());
-        ((TextView) view.findViewById(R.id.recipes_item_text_fat)).setText(recipe.getTv_fat());
-        ((TextView) view.findViewById(R.id.recipes_item_text_carbs)).setText(recipe.getTv_carbs());
+        Recipe_Item recipe = (Recipe_Item) getItem(position);
         ((TextView) view.findViewById(R.id.tvIngredientText)).setText(recipe.getTv_ingredient());
         return view;
     }
 }
+

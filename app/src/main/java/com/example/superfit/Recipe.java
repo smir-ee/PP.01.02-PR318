@@ -2,9 +2,10 @@ package com.example.superfit;
 
 import android.graphics.Bitmap;
 
-public class Recipe {
+public class Recipe  {
     Bitmap iv_recipe;
-    String tv_recipe_name, tv_recipe_value, tv_protein, tv_fat, tv_carbs;
+    String tv_recipe_name, tv_recipe_value, tv_protein, tv_fat, tv_carbs, tv_ingredient;
+    //Array tv_ingredient;
 
     public Bitmap getIv_recipe() {
         return iv_recipe;
@@ -38,8 +39,7 @@ public class Recipe {
         this.tv_recipe_name = tv_recipe_name;
     }
 
-    public void setTv_recipe_value(String tv_recipe_value) {
-        this.tv_recipe_value = tv_recipe_value;
+    public void setTv_recipe_value(String tv_recipe_value) { this.tv_recipe_value = tv_recipe_value;
     }
 
     public void setTv_protein(String tv_protein) {
@@ -53,4 +53,11 @@ public class Recipe {
     public void setTv_carbs(String tv_carbs) {
         this.tv_carbs = tv_carbs;
     }
+
+    public String getTv_ingredient() { return tv_ingredient;}
+
+    public void setTv_ingredient(String tv_ingredient) {this.tv_ingredient = tv_ingredient;}
+
+   // public Array getTv_ingredient() { return tv_ingredient;}
+    //public void setTv_ingredient(Array tv_ingredient) {this.tv_ingredient = tv_ingredient;}
 }

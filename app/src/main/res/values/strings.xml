@@ -19,5 +19,7 @@
     <string name="passwords_not_confirm">CUMPASS</string>
     <string name="not_valid_code">CUMCODE</string>
     <string name="recipes_item_name_txt">Chicken and Dumplings</string>
+    <string name="recipetxt">Recipe</string>
+    <string name="recipe_name_txt">Chicken Vesuvio</string>
 
 </resources>
