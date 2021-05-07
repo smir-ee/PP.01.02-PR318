@@ -119,7 +119,7 @@ public class RecipesList_Item extends AppCompatActivity {
                     currentRecipe.setTv_protein(Math.round(procnt_value) + procnt_unit);
 
                     JSONObject INGREDIENTLIN = (JSONObject) totalNutrients.get("ingredientLines");
-                    currentRecipe.setTv_ingredient((String) recipe.get("ingredients"));
+                    //currentRecipe.setTv_ingredient((String) recipe.get("ingredients"));
                     recipes.add(currentRecipe);
                 }
                 runOnUiThread(() -> {

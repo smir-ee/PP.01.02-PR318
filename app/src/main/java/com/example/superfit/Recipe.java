@@ -4,7 +4,7 @@ import android.graphics.Bitmap;
 
 public class Recipe  {
     Bitmap iv_recipe;
-    String tv_recipe_name, tv_recipe_value, tv_protein, tv_fat, tv_carbs, tv_ingredient;
+    String tv_recipe_ID, tv_recipe_name, tv_recipe_value, tv_protein, tv_fat, tv_carbs, tv_ingredient, tv_q;
     //Array tv_ingredient;
 
     public Bitmap getIv_recipe() {
@@ -39,8 +39,7 @@ public class Recipe  {
         this.tv_recipe_name = tv_recipe_name;
     }
 
-    public void setTv_recipe_value(String tv_recipe_value) { this.tv_recipe_value = tv_recipe_value;
-    }
+    public void setTv_recipe_value(String tv_recipe_value) { this.tv_recipe_value = tv_recipe_value; }
 
     public void setTv_protein(String tv_protein) {
         this.tv_protein = tv_protein;
@@ -57,6 +56,11 @@ public class Recipe  {
     public String getTv_ingredient() { return tv_ingredient;}
 
     public void setTv_ingredient(String tv_ingredient) {this.tv_ingredient = tv_ingredient;}
+    public String getTv_recipe_ID() { return  tv_recipe_ID;}
+    public void setTv_recipe_ID(String tv_recipe_ID) { this.tv_recipe_ID =  tv_recipe_ID;}
+
+    public String getTv_q() {return tv_q;}
+    public void setTv_q(String tv_q) {this.tv_q = tv_q;}
 
    // public Array getTv_ingredient() { return tv_ingredient;}
     //public void setTv_ingredient(Array tv_ingredient) {this.tv_ingredient = tv_ingredient;}

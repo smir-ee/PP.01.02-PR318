@@ -109,6 +109,14 @@
                             android:text="carbs"/>
                     </LinearLayout>
                 </LinearLayout>
+                <TextView
+                    android:id="@+id/test"
+                    android:visibility="invisible"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textAppearance="@style/recipes_item_text_st"
+                    android:text="carbs"/>
         </LinearLayout>
         </LinearLayout>
     </LinearLayout>

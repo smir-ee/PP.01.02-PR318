@@ -38,19 +38,26 @@ public class RecipesAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
         View view = convertView;
+
         if (view == null){
             view = li.inflate(R.layout.recipes_item, parent, false);
         }
 
         Recipe recipe = (Recipe) getItem(position);
+       // RecipesAdapter_Adapter adapter = new RecipesAdapter_Adapter(ctx, recipes);
         ((ImageView) view.findViewById(R.id.recipes_item_image)).setImageBitmap(recipe.getIv_recipe());
         ((TextView) view.findViewById(R.id.recipes_item_name)).setText(recipe.getTv_recipe_name());
         ((TextView) view.findViewById(R.id.recipes_item_text_kcal)).setText(recipe.getTv_recipe_value());
         ((TextView) view.findViewById(R.id.recipes_item_text_protein)).setText(recipe.getTv_protein());
         ((TextView) view.findViewById(R.id.recipes_item_text_fat)).setText(recipe.getTv_fat());
         ((TextView) view.findViewById(R.id.recipes_item_text_carbs)).setText(recipe.getTv_carbs());
-        ((TextView) view.findViewById(R.id.tvIngredientText)).setText(recipe.getTv_ingredient());
+        //((TextView) view.findViewById(R.id.test)).setText(recipe.getTv_recipe_ID());
+
+
+        //((ListView) view.findViewById(R.id.test)).setText(recipe.getTv_ingredient());
+//        ((ListView) view.findViewById(R.id.test)).setAdapter(adapter);
         return view;
     }
 }

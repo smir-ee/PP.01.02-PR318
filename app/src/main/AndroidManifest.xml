@@ -24,7 +24,7 @@
         <activity android:name=".autorization_activity"/>
         <activity android:name=".ResipesList"/>
         <activity android:name=".RecipesList_Item"/>
-        <activity android:name=".RecipeScreenActivity"></activity>
+        <activity android:name=".RecipeScreenActivity"/>
 
 
     </application>

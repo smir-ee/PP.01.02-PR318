@@ -38,12 +38,12 @@ import javax.net.ssl.HttpsURLConnection;
 public class ResipesList extends AppCompatActivity {
     CardView cv_recipes_filters, cv_balanced, cv_high_fiber, cv_high_protein;
     TextView tv_balanced, tv_high_fiber, tv_high_protein;
-    ListView lv_recipes_list;
+    ListView lv_recipes_list, test;
     RecipesAdapter adapter;
     Recipe currentRecipe;
     ArrayList<Recipe> recipes = new ArrayList<>();
     String text;
-    String nameL, src, enerc_kcal_valueL, fat_valueL, chocdf_valueL, procnt_valueL;
+    String nameL, src, enerc_kcal_valueL, fat_valueL, chocdf_valueL, procnt_valueL, IDL, QL;
     Bitmap bt;
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -56,6 +56,7 @@ public class ResipesList extends AppCompatActivity {
         StrictMode.setThreadPolicy(policy);
 
         lv_recipes_list = findViewById(R.id.lv_recipes_list);
+//        ListView test = findViewById(R.id.test);
 
         adapter = new RecipesAdapter(ResipesList.this, recipes);
         lv_recipes_list.setAdapter(adapter);
@@ -68,6 +69,7 @@ public class ResipesList extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), RecipeScreenActivity.class);
                 //intent.putExtra("recipe", recipes.get(position)));
                 //intent.putExtra("recipe", (Serializable) recipes.get(position));
+                intent.putExtra("Ql", recipes.get(position).getTv_q());
                 TextView textView1 = (TextView) view.findViewById(R.id.recipes_item_name);
                 String name = (String) (textView1).getText();
                 intent.putExtra("name", name);
@@ -91,6 +93,17 @@ public class ResipesList extends AppCompatActivity {
                 TextView textView5 = (TextView) view.findViewById(R.id.recipes_item_text_protein);
                 String protein = (String) (textView5).getText();
                 intent.putExtra("protein", protein);
+
+                //TextView textView6 = (TextView) view.findViewById(R.id.test);
+                //String ID = (String) (textView5).getText();
+
+
+                intent.putExtra("ID", recipes.get(position).getTv_recipe_ID());
+
+
+
+
+
                 startActivity(intent);
 
             }
@@ -150,6 +163,13 @@ public class ResipesList extends AppCompatActivity {
 
                     JSONObject jo = (JSONObject) o;
                     JSONObject recipe = (JSONObject) jo.get("recipe");
+
+                    QL = ((String) recipe.get("q"));
+                    currentRecipe.setTv_q(QL);
+
+                    IDL = ((String) recipe.get("uri"));
+                    currentRecipe.setTv_recipe_ID(IDL);
+
                     nameL = ((String) recipe.get("label"));
                     currentRecipe.setTv_recipe_name(nameL);
 
@@ -192,17 +212,18 @@ public class ResipesList extends AppCompatActivity {
                     //JSONArray INGREDIENTLIN = (JSONArray) recipe.get("ingredients");
                     //currentRecipe.setTv_ingredient((String) INGREDIENTLIN.get("text"));
 
-                    JSONArray ingr = (JSONArray) recipe.get("ingredients");
-                    for (Object o1 : ingr) {
-                        JSONObject j1o = (JSONObject) o1;
-                        currentRecipe.setTv_ingredient((String) j1o.get("text"));
-                    }
+//                    JSONArray ingr = (JSONArray) recipe.get("ingredients");
+//                    for (Object o1 : ingr) {
+//                        JSONObject j1o = (JSONObject) o1;
+//                        currentRecipe.setTv_ingredient((String) j1o.get("text"));
+//                    }
                     recipes.add(currentRecipe);
                 }
                 runOnUiThread(() -> {
                     adapter = new RecipesAdapter(ResipesList.this, recipes);
                     lv_recipes_list.setAdapter(adapter);
                 });
+                //inputStream.close();
 
             } catch (ParseException | IOException e) {
                 e.printStackTrace();
