@@ -104,7 +104,7 @@
                             android:fontFamily="@font/montserrat"
                             android:textStyle="bold"
                             android:textSize="14sp"
-                            android:text="76 kg"
+                            android:text="@string/undefined"
                             android:layout_gravity="center"
                             android:layout_marginStart="10dp"/>
                     </LinearLayout>
@@ -129,7 +129,7 @@
                             android:fontFamily="@font/montserrat"
                             android:textStyle="bold"
                             android:textSize="14sp"
-                            android:text="178 cm"
+                            android:text="@string/undefined"
                             android:layout_gravity="center"
                             android:layout_marginStart="10dp"/>
 
@@ -319,7 +319,8 @@
             android:drawableStart="@drawable/arrow_sign_out"
             android:fontFamily="@font/montserrat_bold"
             android:gravity="center"
-            android:text="@string/sign_out" />
+            android:text="@string/sign_out"
+            android:onClick="onClickSignOut"/>
 
     </LinearLayout>
 

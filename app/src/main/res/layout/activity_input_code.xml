@@ -37,16 +37,22 @@
         android:layout_height="wrap_content">
         <TableRow>
             <ImageView
+                android:onClick="onClickNum"
+                android:id="@+id/num9"
                 android:layout_margin="12.5dp"
                 android:layout_width="78dp"
                 android:layout_height="78dp"
                 android:src="@drawable/nine"/>
             <ImageView
+                android:onClick="onClickNum"
+                android:id="@+id/num1"
                 android:layout_margin="12.5dp"
                 android:layout_width="78dp"
                 android:layout_height="78dp"
                 android:src="@drawable/one"/>
             <ImageView
+                android:onClick="onClickNum"
+                android:id="@+id/num2"
                 android:layout_margin="12.5dp"
                 android:layout_width="78dp"
                 android:layout_height="78dp"
@@ -54,16 +60,22 @@
         </TableRow>
         <TableRow>
             <ImageView
+                android:onClick="onClickNum"
+                android:id="@+id/num3"
                 android:layout_margin="12.5dp"
                 android:layout_width="78dp"
                 android:layout_height="78dp"
                 android:src="@drawable/three"/>
             <ImageView
+                android:onClick="onClickNum"
+                android:id="@+id/num4"
                 android:layout_margin="12.5dp"
                 android:layout_width="78dp"
                 android:layout_height="78dp"
                 android:src="@drawable/four"/>
             <ImageView
+                android:onClick="onClickNum"
+                android:id="@+id/num5"
                 android:layout_margin="12.5dp"
                 android:layout_width="78dp"
                 android:layout_height="78dp"
@@ -71,17 +83,23 @@
         </TableRow>
         <TableRow>
             <ImageView
+                android:onClick="onClickNum"
+                android:id="@+id/num6"
                 android:layout_margin="12.5dp"
                 android:layout_width="78dp"
                 android:layout_height="78dp"
                 android:src="@drawable/six"
                 />
             <ImageView
+                android:onClick="onClickNum"
+                android:id="@+id/num7"
                 android:layout_margin="12.5dp"
                 android:layout_width="78dp"
                 android:layout_height="78dp"
                 android:src="@drawable/seven"/>
             <ImageView
+                android:onClick="onClickNum"
+                android:id="@+id/num8"
                 android:layout_margin="12.5dp"
                 android:layout_width="78dp"
                 android:layout_height="78dp"
