@@ -46,6 +46,7 @@ public class ResipesList extends AppCompatActivity {
     String nameL, src, enerc_kcal_valueL, fat_valueL, chocdf_valueL, procnt_valueL, IDL, QL;
     Bitmap bt;
 
+
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {

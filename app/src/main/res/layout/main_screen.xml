@@ -210,7 +210,8 @@
                             android:layout_gravity="bottom"
                             android:fontFamily="@font/montserrat_bold"
                             android:text="@string/see_alltxt"
-                            android:textAppearance="@style/see_all" />
+                            android:textAppearance="@style/see_all"
+                            android:onClick="See_all"/>
                     </LinearLayout>
 
 
