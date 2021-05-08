@@ -1,17 +1,23 @@
 package com.example.superfit.Recipes;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.superfit.MainScreen.MainScreen;
 import com.example.superfit.R;
 
 import org.json.simple.JSONObject;
@@ -29,6 +35,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -40,6 +47,8 @@ public class Recipes extends AppCompatActivity {
     Recipe currentRecipe;
     final URL[] url = new URL[3];
     TextView errorText;
+    ArrayList<String> ingredients;
+    Button balanced_bt, high_fiber_bt, high_protein_bt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,13 +66,31 @@ public class Recipes extends AppCompatActivity {
         data = new ArrayList<>();
         listView = findViewById(R.id.list);
         errorText = findViewById(R.id.errorText);
+        balanced_bt = findViewById(R.id.bt_balanced);
+        high_fiber_bt = findViewById(R.id.bt_highFiber);
+        high_protein_bt = findViewById(R.id.bt_highProtein);
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(Recipes.this, SeparateRecipe.class);
+                intent.putStringArrayListExtra("ing", ingredients);
+                startActivity(intent);
+            }
+        });
     }
 
     public void onBalancedClick(View v){
         errorText.setText("");
+        balanced_bt.setBackgroundResource(R.drawable.recipe_button_inverted);
+        balanced_bt.setTextColor(ContextCompat.getColor(this, R.color.someColor));
+        high_fiber_bt.setBackgroundResource(R.drawable.recipe_button);
+        high_fiber_bt.setTextColor(ContextCompat.getColor(this, R.color.white));
+        high_protein_bt.setBackgroundResource(R.drawable.recipe_button);
+        high_protein_bt.setTextColor(ContextCompat.getColor(this, R.color.white));
         if (adapter != null){
             adapter.clear();
         }
@@ -71,6 +98,12 @@ public class Recipes extends AppCompatActivity {
     }
 
     public void onHighFiberClick(View v){
+        high_fiber_bt.setBackgroundResource(R.drawable.recipe_button_inverted);
+        high_fiber_bt.setTextColor(ContextCompat.getColor(this, R.color.someColor));
+        balanced_bt.setBackgroundResource(R.drawable.recipe_button);
+        balanced_bt.setTextColor(ContextCompat.getColor(this, R.color.white));
+        high_protein_bt.setBackgroundResource(R.drawable.recipe_button);
+        high_protein_bt.setTextColor(ContextCompat.getColor(this, R.color.white));
         if (adapter != null){
             adapter.clear();
         }
@@ -78,6 +111,12 @@ public class Recipes extends AppCompatActivity {
     }
 
     public void onHighProteinClick(View v){
+        high_protein_bt.setBackgroundResource(R.drawable.recipe_button_inverted);
+        high_protein_bt.setTextColor(ContextCompat.getColor(this, R.color.someColor));
+        high_fiber_bt.setBackgroundResource(R.drawable.recipe_button);
+        high_fiber_bt.setTextColor(ContextCompat.getColor(this, R.color.white));
+        balanced_bt.setBackgroundResource(R.drawable.recipe_button);
+        balanced_bt.setTextColor(ContextCompat.getColor(this, R.color.white));
         errorText.setText("");
         if (adapter != null){
             adapter.clear();
@@ -175,5 +214,10 @@ public class Recipes extends AppCompatActivity {
             e.printStackTrace();
         }
         return bitmap;
+    }
+
+    public void return_click(View v){
+        Intent intent = new Intent(this, MainScreen.class);
+        startActivity(intent);
     }
 }

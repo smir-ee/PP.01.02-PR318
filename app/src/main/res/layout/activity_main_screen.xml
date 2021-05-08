@@ -209,6 +209,7 @@
                 android:layout_marginTop="10dp">
 
                 <ImageView
+                    android:onClick="onLogOutClick"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -217,6 +218,7 @@
                     android:src="@drawable/vectorb"/>
 
                 <TextView
+                    android:onClick="onLogOutClick"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="24dp"
