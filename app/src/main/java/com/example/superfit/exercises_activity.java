@@ -1,6 +1,8 @@
 package com.example.superfit;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,22 +20,6 @@ public class exercises_activity extends AppCompatActivity {
             "It develops endurance, strengthens the legs and the cardiovascular system."};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-//        image[0] = R.drawable.exercises_image1;
-//        image[1] = R.drawable.exercises_image2;
-//        image[2] = R.drawable.exercises_image3;
-//        image[3] = R.drawable.exercises_image4;
-//        image[4] = R.drawable.exercises_image5;
-//        name[0] = "Push-Ups";
-//        name[1] = "Plank";
-//        name[2] = "Squats";
-//        name[3] = "Crunch";
-//        name[4] = "Running-Ups";
-//        text[0] = "";
-//        text[1] = "";
-//        text[2] = "";
-//        text[3] = "";
-//        text[4] = "";
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.exercises_screen);
         listView = findViewById(R.id.lv_exercises);
@@ -50,8 +36,15 @@ public class exercises_activity extends AppCompatActivity {
             exe_list.add(lv_item);
         }
 
-        exercises_adapter adapter = new exercises_adapter(this, exe_list);
-        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch (position){
+                    case 0:
+
+                }
+            }
+        });
 
     }
 }
