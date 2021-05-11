@@ -76,7 +76,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/montserrat_regular"
                             android:textAppearance="@style/recipes_item_text_st"
-                            android:text="protein •"/>
+                            android:text=" •"/>
                         <TextView
                             android:id="@+id/recipes_item_text_fat"
                             android:layout_marginLeft="5dp"
@@ -91,7 +91,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/montserrat_regular"
                             android:textAppearance="@style/recipes_item_text_st"
-                            android:text="fat •"/>
+                            android:text=" •"/>
                         <TextView
                             android:id="@+id/recipes_item_text_carbs"
                             android:layout_marginLeft="5dp"
@@ -100,13 +100,7 @@
                             android:fontFamily="@font/montserrat_regular"
                             android:textAppearance="@style/recipes_item_text_st"
                             android:text="---"/>
-                        <TextView
-                            android:layout_marginLeft="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrat_regular"
-                            android:textAppearance="@style/recipes_item_text_st"
-                            android:text="carbs"/>
+
                     </LinearLayout>
                 </LinearLayout>
                 <TextView

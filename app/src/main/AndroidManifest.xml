@@ -22,10 +22,9 @@
         <activity android:name=".main_activity"/>
         <activity android:name=".splash_activity"/>
         <activity android:name=".autorization_activity"/>
-        <activity android:name=".ResipesList"/>
-        <activity android:name=".RecipesList_Item"/>
-        <activity android:name=".RecipeScreenActivity"/>
         <activity android:name=".exercises_activity"/>
+        <activity android:name="recipes.Recipes"/>
+        <activity android:name="recipes.RecipeScreen"/>
 
 
     </application>

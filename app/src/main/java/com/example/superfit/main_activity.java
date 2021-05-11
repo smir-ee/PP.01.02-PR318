@@ -6,6 +6,8 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import recipes.Recipes;
+
 public class main_activity extends AppCompatActivity {
 
     @Override
@@ -22,7 +24,8 @@ public class main_activity extends AppCompatActivity {
         startActivity(intent);
     }
     public void Recipes(View view){
-        Intent intent = new Intent (main_activity.this, ResipesList.class );
+        //Intent intent = new Intent (main_activity.this, ResipesList.class );
+        Intent intent = new Intent (main_activity.this, Recipes.class );
         startActivity(intent);
     }
 }

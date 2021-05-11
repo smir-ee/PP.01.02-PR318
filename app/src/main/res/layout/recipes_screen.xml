@@ -62,23 +62,26 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
                 <RadioButton
+                    android:id="@+id/Balanced"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:button="@drawable/balanced_button"
-                    android:onClick="onClick_balanced"/>
+                    android:button="@drawable/balanced_button"/>
+                    <!--android:onClick="onClick_balanced"-->
                 <RadioButton
+                    android:id="@+id/High_Fiber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:button="@drawable/high_fiber_button"
-                    android:onClick="onClick_highFiber"/>
+                    android:button="@drawable/high_fiber_button"/>
+                    <!--android:onClick="onClick_highFiber"-->
                 <RadioButton
+                    android:id="@+id/High_Protein"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
-                    android:button="@drawable/high_protein_button"
-                    android:onClick="onClick_highProtein"/>
+                    android:button="@drawable/high_protein_button"/>
+                    <!--android:onClick="onClick_highProtein"-->
             </RadioGroup>
 
         </LinearLayout>
@@ -88,4 +91,11 @@
         android:id="@+id/lv_recipes_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></ListView>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animationResolution="@android:integer/config_longAnimTime"
+        android:padding="100dp" />
 </LinearLayout>
