@@ -23,6 +23,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
+                    android:onClick="return_click"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/vector"
@@ -41,6 +42,7 @@
             </LinearLayout>
 
             <EditText
+                android:id="@+id/Search"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/edit_text_shape"
@@ -61,30 +63,36 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/bt_balanced"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
                     android:background="@drawable/recipe_button"
                     android:textSize="12sp"
                     android:textColor="#FFFFFF"
                     android:text="Balanced"
+                    android:onClick="onBalancedClick"
                     android:textAllCaps="false"
                     android:fontFamily="@font/montserrat_light"
                     android:layout_marginRight="55dp"/>
                 <Button
+                    android:id="@+id/bt_highFiber"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
                     android:textSize="12sp"
                     android:textColor="#FFFFFF"
                     android:text="High-Fiber"
+                    android:onClick="onHighFiberClick"
                     android:textAllCaps="false"
                     android:fontFamily="@font/montserrat_light"
                     android:background="@drawable/recipe_button"/>
                 <Button
+                    android:id="@+id/bt_highProtein"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
                     android:textSize="12sp"
                     android:textColor="#FFFFFF"
                     android:text="High-Protein"
+                    android:onClick="onHighProteinClick"
                     android:textAllCaps="false"
                     android:fontFamily="@font/montserrat_light"
                     android:background="@drawable/recipe_button"
@@ -93,10 +101,19 @@
             </LinearLayout>
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/errorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/montserrat_light"/>
+
         <ListView
+            android:id="@+id/list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="0dp"
             tools:listitem="@layout/recipes_item" />
 
     </LinearLayout>
