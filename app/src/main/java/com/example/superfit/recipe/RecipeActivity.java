@@ -1,16 +1,16 @@
-package com.example.superfit;
+package com.example.superfit.recipe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.superfit.R;
+import com.example.superfit.adapters.IngredientAdapter;
+import com.example.superfit.helperClasses.HideActionBarAndTransparentStatusBar;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

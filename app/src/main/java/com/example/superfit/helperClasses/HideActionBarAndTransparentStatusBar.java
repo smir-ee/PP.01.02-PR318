@@ -1,4 +1,4 @@
-package com.example.superfit;
+package com.example.superfit.helperClasses;
 
 import android.view.View;
 import android.view.Window;

@@ -1,4 +1,4 @@
-package com.example.superfit;
+package com.example.superfit.loadScreens;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,10 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.superfit.helperClasses.HideActionBarAndTransparentStatusBar;
+import com.example.superfit.mainScreen.MainScreen;
+import com.example.superfit.R;
+import com.example.superfit.mainScreen.User;
 import com.google.gson.Gson;
 
 public class InputCode extends AppCompatActivity {

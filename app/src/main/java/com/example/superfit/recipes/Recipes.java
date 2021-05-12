@@ -1,25 +1,22 @@
-package com.example.superfit;
+package com.example.superfit.recipes;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.ListView;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.ToggleButton;
 
-import java.io.Serializable;
+import com.example.superfit.R;
+import com.example.superfit.recipe.Recipe;
+import com.example.superfit.recipe.RecipeActivity;
+import com.example.superfit.adapters.RecipeAdapter;
+import com.example.superfit.helperClasses.HideActionBarAndTransparentStatusBar;
+
 import java.util.ArrayList;
 
 public class Recipes extends AppCompatActivity  {

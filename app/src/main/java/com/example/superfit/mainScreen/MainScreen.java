@@ -1,12 +1,15 @@
-package com.example.superfit;
+package com.example.superfit.mainScreen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.view.View;
+
+import com.example.superfit.helperClasses.HideActionBarAndTransparentStatusBar;
+import com.example.superfit.R;
+import com.example.superfit.recipes.Recipes;
+import com.example.superfit.loadScreens.MainActivity;
 
 public class MainScreen extends AppCompatActivity {
 

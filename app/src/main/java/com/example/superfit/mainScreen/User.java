@@ -1,4 +1,4 @@
-package com.example.superfit;
+package com.example.superfit.mainScreen;
 
 public class User {
    private String name;

@@ -1,4 +1,4 @@
-package com.example.superfit;
+package com.example.superfit.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,8 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.recyclerview.widget.RecyclerView;
-
+import com.example.superfit.R;
+import com.example.superfit.recipe.Recipe;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

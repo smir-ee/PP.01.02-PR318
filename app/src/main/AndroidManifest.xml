@@ -10,22 +10,22 @@
         android:roundIcon="@drawable/appicon"
         android:supportsRtl="true"
         android:theme="@style/Theme.SuperFit">
-        <activity android:name=".RecipeActivity">
+        <activity android:name=".recipe.RecipeActivity">
 
         </activity>
-        <activity android:name=".Recipes">
+        <activity android:name=".recipes.Recipes">
 
         </activity>
-        <activity android:name=".MainScreen">
+        <activity android:name=".mainScreen.MainScreen">
             <intent-filter>
                 <action android:name="com.example.MAINSCREEN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".InputCode" />
-        <activity android:name=".Registration" />
-        <activity android:name=".SplashScreen">
+        <activity android:name=".loadScreens.InputCode" />
+        <activity android:name=".loadScreens.Registration" />
+        <activity android:name=".loadScreens.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,7 +33,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".loadScreens.MainActivity">
             <intent-filter>
                 <action android:name="com.example.SIGNIN" />
 

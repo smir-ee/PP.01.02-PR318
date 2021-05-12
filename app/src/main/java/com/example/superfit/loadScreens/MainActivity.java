@@ -1,4 +1,4 @@
-package com.example.superfit;
+package com.example.superfit.loadScreens;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,9 @@ import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.superfit.helperClasses.HideActionBarAndTransparentStatusBar;
+import com.example.superfit.R;
 
 public class MainActivity extends AppCompatActivity {
     EditText etUserName;

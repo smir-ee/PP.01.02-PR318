@@ -1,4 +1,4 @@
-package com.example.superfit;
+package com.example.superfit.recipe;
 
 import androidx.annotation.NonNull;
 
