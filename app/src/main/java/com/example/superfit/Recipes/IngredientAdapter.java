@@ -5,36 +5,43 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Filter;
+import android.widget.Filterable;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.superfit.MainScreen.ExerciseItem;
 import com.example.superfit.R;
 
-import java.util.ArrayList;
+import org.w3c.dom.Text;
 
-public class IngredientAdapter extends ArrayAdapter<String> {
+import java.util.ArrayList;
+import java.util.List;
+
+public class IngredientAdapter extends ArrayAdapter<Ingredient> {
 
     private final int resourceLayout;
 
-    public IngredientAdapter(Context context, int resource, ArrayList<String> ing){
-        super(context, resource, ing);
+    public IngredientAdapter(Context context, int resource, ArrayList<Ingredient> recipes){
+        super(context, resource, recipes);
         this.resourceLayout = resource;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
+
         View v = convertView;
-        String ingredient = getItem(position);
-        Ingredient ingredient1 = new Ingredient();
+        Ingredient recipe = getItem(position);
 
         if(v == null){
             LayoutInflater layoutInflater = LayoutInflater.from(getContext());
             v = layoutInflater.inflate(resourceLayout, null);
         }
 
-        if(ingredient != null){
-            TextView ing = v.findViewById(R.id.txtIng);
+        if(recipe != null){
+            TextView name = v.findViewById(R.id.txtIng);
 
-            ing.setText(ingredient1.getIngredient());
+            name.setText(recipe.getIngredient());
         }
         return v;
     }

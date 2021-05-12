@@ -37,6 +37,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/txtName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
@@ -47,6 +48,7 @@
             android:textSize="24dp" />
 
         <TextView
+            android:id="@+id/txtCalories"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Calories"
@@ -57,6 +59,7 @@
             android:layout_marginTop="15dp"/>
 
         <TextView
+            android:id="@+id/txtPFC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="PFC"
