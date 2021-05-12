@@ -64,8 +64,10 @@ public class RecipeScreen extends AppCompatActivity {
         ingredientListView.setAdapter(adapter);
     }
     public void goBack(View view){
-        Intent intent = new Intent(this, Recipes.class);
-        startActivity(intent);
+        finish();
+        //onBackPressed();
+        //Intent intent = new Intent(this, Recipes.class);
+        //startActivity(intent);
     }
 
 }

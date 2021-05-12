@@ -14,7 +14,7 @@
         <ImageView
             android:id="@+id/recipe_bg_item"
             android:layout_width="match_parent"
-            android:layout_height="160dp"
+            android:layout_height="170dp"
             android:layout_marginBottom="-24dp"
             android:layout_weight="2.5"
             android:gravity="left"
@@ -25,8 +25,8 @@
         <ImageButton
             android:id="@+id/btnReturn"
             android:layout_marginLeft="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:background="@drawable/vector_b"
             android:layout_marginTop="30dp"
             android:onClick="goBack"/>
@@ -45,7 +45,7 @@
             android:id="@+id/imageView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="145dp"
+            android:layout_marginTop="150dp"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/line" />
     </RelativeLayout>
@@ -101,7 +101,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_regular"
                     android:textAppearance="@style/recipes_item_text_st"
-                    android:text="protein •"/>
+                    android:text=" •"/>
                 <TextView
                     android:id="@+id/recipe_text_fat_item"
                     android:layout_marginLeft="5dp"
@@ -116,7 +116,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_regular"
                     android:textAppearance="@style/recipes_item_text_st"
-                    android:text="fat •"/>
+                    android:text=" •"/>
                 <TextView
                     android:id="@+id/recipe_text_carbs_item"
                     android:layout_marginLeft="5dp"
@@ -125,13 +125,6 @@
                     android:fontFamily="@font/montserrat_regular"
                     android:textAppearance="@style/recipes_item_text_st"
                     android:text="---"/>
-                <TextView
-                    android:layout_marginLeft="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat_regular"
-                    android:textAppearance="@style/recipes_item_text_st"
-                    android:text="carbs"/>
             </LinearLayout>
 
             <TextView
@@ -151,6 +144,7 @@
                 android:id="@+id/recipe_ls_item"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@color/white"
                 android:divider="@null"/>
 
         </LinearLayout>

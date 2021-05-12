@@ -36,7 +36,7 @@ public class registration_activity extends AppCompatActivity {
 
         validation.addValidation(this, R.id.username, RegexTemplate.NOT_EMPTY, R.string.not_empty_name_error);
         validation.addValidation(this, R.id.email, Patterns.EMAIL_ADDRESS, R.string.not_empty_email_error);
-        validation.addValidation(this, R.id.code, R.id.repeatcode, R.string.passwords_not_confirm);
+        validation.addValidation(this, R.id.repeatcode, R.id.code, R.string.passwords_not_confirm);
         validation.addValidation(this, R.id.code, "[1-9]{4}", R.string.not_valid_code);
 
 

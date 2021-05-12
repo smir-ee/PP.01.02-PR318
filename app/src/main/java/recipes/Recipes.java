@@ -64,7 +64,7 @@ public class Recipes extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(Recipes.this, RecipeScreen.class);
                 intent.putExtra("Recipe", recipes.get(position));
-                Log.i("", recipes.get(position).getLabel());
+               // Log.i("", recipes.get(position).getLabel());
                 startActivity(intent);
             }
         });
@@ -191,10 +191,10 @@ public class Recipes extends AppCompatActivity {
                 case "balanced":
                     recipes = recipesBalanced;
                     break;
-                case "high-fiber":
+                case "high-protein":
                     recipes = recipesProtein;
                     break;
-                case "high-protein":
+                case "low-carb":
                     recipes = recipesFiber;
                     break;
             }

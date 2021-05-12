@@ -15,9 +15,10 @@
     <string name="sign_outtxt">Sign Out</string>
     <string name="searchtxt">Search...</string>
     <string name="not_empty_name_error">Введите имя пользователя</string>
-    <string name="not_empty_email_error">CUMMAIL</string>
-    <string name="passwords_not_confirm">CUMPASS</string>
-    <string name="not_valid_code">CUMCODE</string>
+    <string name="not_empty_email_error">Неверный адрес эл.почты</string>
+    <string name="passwords_not_confirm">Пароли не совпадают</string>
+    <string name="not_valid_code">Неверный пароль (максимум 4 цифры)</string>
+    <string name="not_valid_user">Неверное имя пользователя</string>
     <string name="recipes_item_name_txt">Chicken and Dumplings</string>
     <string name="recipetxt">Recipe</string>
     <string name="recipe_name_txt">Chicken Vesuvio</string>

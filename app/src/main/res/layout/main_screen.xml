@@ -238,7 +238,7 @@
                             android:layout_weight="1"
                             android:foreground="@drawable/line_flex"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/flex" />
+                            android:src="@drawable/exercises_image1" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -262,7 +262,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="10dp"
                                         android:fontFamily="@font/montserrat_bold"
-                                        android:text="TEST"
+                                        android:text="Push-Ups"
                                         android:textColor="@color/white" />
 
                                 </LinearLayout>
@@ -309,7 +309,7 @@
                             android:layout_weight="1"
                             android:foreground="@drawable/line_flex"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/flex" />
+                            android:src="@drawable/exercises_image2" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -333,7 +333,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="10dp"
                                         android:fontFamily="@font/montserrat_bold"
-                                        android:text="TEST"
+                                        android:text="Plank"
                                         android:textColor="@color/white" />
 
                                 </LinearLayout>
@@ -350,7 +350,7 @@
                                         android:layout_marginLeft="10dp"
                                         android:layout_marginRight="15dp"
                                         android:fontFamily="@font/montserrat_light"
-                                        android:text="Push-ups exercise the pectoral muscles, triceps, and anterior deltoids."
+                                        android:text="The plank strengthens the abdominals, back and shoulders."
                                         android:textAppearance="@style/push_ups_ex" />
                                 </LinearLayout>
                             </LinearLayout>

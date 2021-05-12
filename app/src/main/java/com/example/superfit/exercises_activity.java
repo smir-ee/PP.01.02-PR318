@@ -15,7 +15,7 @@ public class exercises_activity extends AppCompatActivity {
     ArrayList<exercises_item> exe_list = new ArrayList<>();
     final int[] image = new int[] {R.drawable.exercises_image1, R.drawable.exercises_image2, R.drawable.exercises_image3, R.drawable.exercises_image4, R.drawable.exercises_image5};
     final String[] name = new String[] {"Push-Ups", "Plank", "Squats", "Crunch", "Running"};
-    final String[] text = new String[]{"Push-ups exercise the pectoral muscles, triceps, and anterior deltoids.", "The plank strengthens the abdominals, back and shoulders. ",
+    final String[] text = new String[]{"Push-ups exercise the pectoral muscles, triceps, and anterior deltoids.", "The plank strengthens the abdominals, back and shoulders.",
             "Сonsidered a vital exercise for increasing the strength and size of the lower body.", "It involves the entire abs, but primarily it works the rectus abdominis muscle.",
             "It develops endurance, strengthens the legs and the cardiovascular system."};
     @Override
