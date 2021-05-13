@@ -3,8 +3,10 @@ package com.example.superfit.MainScreen;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
+import android.content.ContentValues;
 import android.content.DialogInterface;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +14,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+import com.example.superfit.DB.SignUpDbHelper;
 import com.example.superfit.R;
+import com.example.superfit.DB.SignUpContract.BodyParameters;
 
 public class Details extends AppCompatActivity {
 
@@ -20,6 +25,12 @@ public class Details extends AppCompatActivity {
     AlertDialog weightDialog;
 
     TextView txtWeight, txtHeight;
+    EditText weight, height;
+
+    SignUpDbHelper dbHelper;
+    SQLiteDatabase db_write, db_read;
+
+    String read_weight, read_height;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,14 +48,29 @@ public class Details extends AppCompatActivity {
 
         builder = new AlertDialog.Builder(Details.this, AlertDialog.THEME_DEVICE_DEFAULT_DARK);
 
+        dbHelper = new SignUpDbHelper(this);
+        db_write = dbHelper.getWritableDatabase();
+        db_read = dbHelper.getReadableDatabase();
+
         txtHeight = findViewById(R.id.txtHeight);
         txtWeight = findViewById(R.id.txtWeight);
+
+        //readWH();
+
+        if (read_weight == null){
+            read_weight = "Undefined";
+        }
+        if (read_height == null){
+            read_height = "Undefined";
+        }
+
+        txtWeight.setText(read_weight);
+        txtHeight.setText(read_height);
     }
 
     public void onChangeWeightClick(View v){
         LayoutInflater inflater = getLayoutInflater();
         View view = inflater.inflate(R.layout.dialog_weight, null);
-        EditText weight;
 
         weight = view.findViewById(R.id.etWeight);
 
@@ -74,7 +100,6 @@ public class Details extends AppCompatActivity {
     public void onChangeHeightClick(View v){
         LayoutInflater inflater = getLayoutInflater();
         View view = inflater.inflate(R.layout.dialog_height, null);
-        EditText height;
 
         height = view.findViewById(R.id.etHeight);
 
@@ -86,6 +111,7 @@ public class Details extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 txtHeight.setText(height.getText().toString() + " cm");
+                writeWH();
                 dialog.cancel();
             }
         });
@@ -99,5 +125,31 @@ public class Details extends AppCompatActivity {
 
         weightDialog = builder.create();
         weightDialog.show();
+    }
+
+    public void writeWH(){
+        ContentValues values = new ContentValues();
+        values.put(BodyParameters.COLUMN_WEIGHT, Integer.parseInt(weight.getText().toString()));
+        values.put(BodyParameters.COLUMN_HEIGHT, Integer.parseInt(height.getText().toString()));
+
+        long newRowId = db_write.insert(BodyParameters.TABLE_NAME, null, values);
+
+        if (newRowId == -1){
+            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void readWH(){
+
+        String SQL_SELECT_WEIGHT = "SELECT "+ BodyParameters.COLUMN_WEIGHT + " FROM "+ BodyParameters.TABLE_NAME + ";";
+
+        Cursor cursor = db_read.rawQuery(SQL_SELECT_WEIGHT, null);
+        read_weight = cursor.getString(1);
+        cursor.close();
+
+        String SQL_SELECT_HEIGHT = "SELECT "+ BodyParameters.COLUMN_HEIGHT + " FROM "+ BodyParameters.TABLE_NAME + ";";
+        Cursor cursor1 = db_read.rawQuery(SQL_SELECT_HEIGHT, null);
+        read_height = cursor1.getString(2);
+        cursor1.close();
     }
 }
