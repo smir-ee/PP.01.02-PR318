@@ -24,7 +24,6 @@ public class Based extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        //db.execSQL(""CREATE TABLE "+TABLE_CONTACTS+" ("+ ID + " INTEGER PRIMARY KEY, "+ USERNAME + " TEXT, " + EMAIL+ " TEXT " + CODE + " TEXT+ ")");
         db.execSQL("create table " + TABLE_CONTACTS + "(" + ID + " integer primary key," + USERNAME + " text, " + EMAIL + " text, " + CODE + " text" + ")");
     }
 
@@ -39,29 +38,6 @@ public class Based extends SQLiteOpenHelper {
 
         onCreate(db);
     }
-//    public void onTimer(SQLiteDatabase db, int count){
-//        //SELECT name FROM sqlite_master WHERE type='table' AND name='table_name';
-//        //db.execSQL("SELECT " + TABLE_CONTACTS + "(" + ID + " integer primary key," + USERNAME + " text, " + EMAIL + " text, " + CODE + " text" + ")");
-//        //db.execSQL("SELECT count(*) FROM sqlite_master WHERE type='table' AND " + "name= " + tableName, null);
-//        Cursor cursor = db.rawQuery("SELECT count(*) FROM sqlite_master WHERE type='table' AND " +
-//                "name= " + TABLE_CONTACTS, null);
-//        cursor.moveToFirst();
-//        count = cursor.getInt(0);
-//        if (!cursor.isClosed())
-//            cursor.close();
-//    }
-
-//    public void onTimer(SQLiteDatabase db, String name, int s){
-//        if (name != " "){
-//            s = 1;
-//        }
-//        else {
-//            s = 0;
-//        }
-//
-//
-//        //txtData.setText("id: " + item_id + " Имя кота: " + item_content);
-//    }
     public void onName(SQLiteDatabase db, int id_pos, String name){
 //        db.execSQL("create table " + TABLE_CONTACTS + "(" + ID + " integer primary key," + USERNAME + " text, " + EMAIL + " text, " + CODE + " text" + ")");
         String query = "SELECT " + Based.ID + ", " + Based.USERNAME + " FROM " + Based.TABLE_CONTACTS;

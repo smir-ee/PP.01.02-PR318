@@ -25,6 +25,7 @@
         <activity android:name=".exercises_activity"/>
         <activity android:name="recipes.Recipes"/>
         <activity android:name="recipes.RecipeScreen"/>
+        <activity android:name=".detail_activity"/>
 
 
     </application>

@@ -3,6 +3,7 @@ package com.example.superfit;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +14,8 @@ public class exercises_activity extends AppCompatActivity {
     ListView listView;
     exercises_item lv_item;
     ArrayList<exercises_item> exe_list = new ArrayList<>();
+   // ArrayAdapter<> arrayAdapter = new ArrayAdapter<>();
+    exercises_adapter adapter;
     final int[] image = new int[] {R.drawable.exercises_image1, R.drawable.exercises_image2, R.drawable.exercises_image3, R.drawable.exercises_image4, R.drawable.exercises_image5};
     final String[] name = new String[] {"Push-Ups", "Plank", "Squats", "Crunch", "Running"};
     final String[] text = new String[]{"Push-ups exercise the pectoral muscles, triceps, and anterior deltoids.", "The plank strengthens the abdominals, back and shoulders.",
@@ -23,6 +26,7 @@ public class exercises_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.exercises_screen);
         listView = findViewById(R.id.lv_exercises);
+        adapter = new exercises_adapter(this, exe_list);
 
         for (int i = 0; i <=4; i++)
         {
@@ -35,6 +39,7 @@ public class exercises_activity extends AppCompatActivity {
             lv_item.setText(textL);
             exe_list.add(lv_item);
         }
+        listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

@@ -162,7 +162,8 @@
                                 <LinearLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginLeft="15dp">
+                                    android:layout_marginLeft="15dp"
+                                    android:onClick="Detail_click">
 
                                     <TextView
                                         android:layout_width="wrap_content"
