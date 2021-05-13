@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/app_icons_foreground"
         android:supportsRtl="true"
         android:theme="@style/Theme.SuperFit">
-        <activity android:name=".Recipes.SeparateRecipe"></activity>
+        <activity android:name=".MainScreen.Details"></activity>
+        <activity android:name=".Recipes.SeparateRecipe" />
         <activity android:name=".Exercises.Running" />
         <activity android:name=".Exercises.Crunch" />
         <activity android:name=".Exercises.Squats" />
