@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,8 +16,9 @@ import com.example.superfit.R;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class RecipeAdapter extends ArrayAdapter<Recipe> {
+public class RecipeAdapter extends ArrayAdapter<Recipe> implements Filterable {
 
     private final int resourceLayout;
 

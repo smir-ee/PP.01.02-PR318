@@ -6,16 +6,15 @@ import androidx.core.content.ContextCompat;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.superfit.MainScreen.MainScreen;
 import com.example.superfit.R;
@@ -48,7 +47,13 @@ public class Recipes extends AppCompatActivity {
     final URL[] url = new URL[3];
     TextView errorText;
     ArrayList<String> ingredients;
+    ArrayList<ArrayList<String>> ingredients_array;
     Button balanced_bt, high_fiber_bt, high_protein_bt;
+    EditText search;
+    String search_request;
+    Intent intent;
+    List<String> names, calories, pfc;
+    List<Bitmap> images;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,12 +68,14 @@ public class Recipes extends AppCompatActivity {
                         | View.SYSTEM_UI_FLAG_FULLSCREEN
                         | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
 
-        data = new ArrayList<>();
         listView = findViewById(R.id.list);
         errorText = findViewById(R.id.errorText);
         balanced_bt = findViewById(R.id.bt_balanced);
         high_fiber_bt = findViewById(R.id.bt_highFiber);
         high_protein_bt = findViewById(R.id.bt_highProtein);
+        search = findViewById(R.id.Search);
+        search_request = "";
+        intent = new Intent(Recipes.this, SeparateRecipe.class);
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
@@ -76,8 +83,11 @@ public class Recipes extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(Recipes.this, SeparateRecipe.class);
-                intent.putStringArrayListExtra("ing", ingredients);
+                intent.putExtra("ing", ingredients_array.get(position));
+                intent.putExtra("Name", names.get(position));
+                intent.putExtra("Calories", calories.get(position));
+                intent.putExtra("PFC", pfc.get(position));
+                intent.putExtra("Image", images.get(position));
                 startActivity(intent);
             }
         });
@@ -94,6 +104,9 @@ public class Recipes extends AppCompatActivity {
         if (adapter != null){
             adapter.clear();
         }
+        if (search.getText().toString() != null){
+            search_request = search.getText().toString();
+        }
         Parse(0);
     }
 
@@ -107,7 +120,10 @@ public class Recipes extends AppCompatActivity {
         if (adapter != null){
             adapter.clear();
         }
-        errorText.setText("There are no recipes available in this category");
+        if (search.getText().toString() != null){
+            search_request = search.getText().toString();
+        }
+        Parse(2);
     }
 
     public void onHighProteinClick(View v){
@@ -121,6 +137,9 @@ public class Recipes extends AppCompatActivity {
         if (adapter != null){
             adapter.clear();
         }
+        if (search.getText().toString() != null){
+            search_request = search.getText().toString();
+        }
         Parse(1);
     }
 
@@ -131,19 +150,26 @@ public class Recipes extends AppCompatActivity {
                 try {
                     switch (i){
                         case 0:
-                            url[0] = new URL("https://api.edamam.com/search?q=chicken&app_id=4da5a427&app_key=6dd6f99730da1737e964379d886e607d&diet=balanced");
+                            url[0] = new URL("https://api.edamam.com/search?q=" + search_request +"&app_id=4da5a427&app_key=6dd6f99730da1737e964379d886e607d&diet=balanced");
                             break;
                         case 1:
-                            url[1] = new URL("https://api.edamam.com/search?q=chicken&app_id=4da5a427&app_key=6dd6f99730da1737e964379d886e607d&diet=high-protein");
+                            url[1] = new URL("https://api.edamam.com/search?q=" + search_request + "&app_id=4da5a427&app_key=6dd6f99730da1737e964379d886e607d&diet=high-protein");
                             break;
                         case 2:
-                            url[2] = new URL("https://api.edamam.com/search?q=chicken&app_id=4da5a427&app_key=6dd6f99730da1737e964379d886e607d&diet=high-fiber");
+                            url[2] = new URL("https://api.edamam.com/search?q=" + search_request + "&app_id=4da5a427&app_key=6dd6f99730da1737e964379d886e607d&diet=high-fiber");
                             break;
                     }
 
                     HttpsURLConnection httpsURLConnection = (HttpsURLConnection) url[i].openConnection();
                     InputStream inputStream = httpsURLConnection.getInputStream();
                     InputStreamReader inputStreamReader = new InputStreamReader(inputStream, "UTF-8");
+                    ingredients = new ArrayList<>();
+                    data = new ArrayList<>();
+                    names = new ArrayList<>();
+                    calories = new ArrayList<>();
+                    pfc = new ArrayList<>();
+                    ingredients_array = new ArrayList<>();
+                    images = new ArrayList<>();
 
                     Object object = new JSONParser().parse(inputStreamReader);
                     JSONObject jsonObject = (JSONObject) object;
@@ -175,11 +201,21 @@ public class Recipes extends AppCompatActivity {
                         String procnt_unit = (String) PROCNT.get("unit");
                         currentRecipe.setProtein(String.valueOf(Math.round(procnt_value)) + procnt_unit + " protein");
                         data.add(currentRecipe);
+
+                        JSONArray array = (JSONArray) recipe.get("ingredientLines");
+                        ingredients = array;
+                        ingredients_array.add(ingredients);
                     }
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            adapter = new RecipeAdapter(Recipes.this,R.layout.recipes_item, data);
+                            for (int i = 0; i < data.size(); i++){
+                                names.add(data.get(i).getName());
+                                calories.add(data.get(i).getCalories());
+                                pfc.add(data.get(i).getProtein() + data.get(i).getFat() + data.get(i).getCarbs());
+                                images.add(data.get(i).getImage());
+                            }
+                            adapter = new RecipeAdapter(Recipes.this, R.layout.recipes_item, data);
                             adapter.notifyDataSetChanged();
                             listView.setAdapter(adapter);
                         }
