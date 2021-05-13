@@ -19,5 +19,7 @@
     <string name="recipe">Recipe</string>
     <string name="see_all">See all</string>
     <string name="undefined">Undefined</string>
+    <string name="exercises">Exercises</string>
+    <string name="weight">Weight</string>
 
 </resources>

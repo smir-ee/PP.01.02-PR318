@@ -9,6 +9,7 @@ import android.preference.PreferenceManager;
 import android.widget.Toast;
 
 import com.example.superfit.R;
+import com.example.superfit.helperClasses.HideActionBarAndTransparentStatusBar;
 
 public class SplashScreen extends AppCompatActivity {
     SharedPreferences sf;
@@ -16,6 +17,7 @@ public class SplashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+        HideActionBarAndTransparentStatusBar.hide(getWindow());
         Thread logoTimer = new Thread(){
             public void run(){
                 try

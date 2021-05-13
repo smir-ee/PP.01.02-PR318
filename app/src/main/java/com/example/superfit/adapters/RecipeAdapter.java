@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class RecipeAdapter extends BaseAdapter{
     private Context mContext;
-    private ArrayList<Recipe> recipes = new ArrayList<>();
+    private ArrayList<Recipe> recipes;
 
     public RecipeAdapter(Context mContext, ArrayList<Recipe> recipes) {
         this.mContext = mContext;

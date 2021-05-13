@@ -22,9 +22,11 @@ public class InputCode extends AppCompatActivity {
     SharedPreferences sPrefs;
     User user;
     TextView login;
+    SharedPreferences sPref;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_input_code);
         sPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         userName = getIntent().getStringExtra("User");
@@ -77,6 +79,11 @@ public class InputCode extends AppCompatActivity {
         }
         if (code.length() == 4){
             if (code.equals(user.getCode())){
+                sPref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                SharedPreferences.Editor ed = sPref.edit();
+                ed.putString("lastUser", user.getName());
+                ed.apply();
+
                 Intent intent = new Intent(this, MainScreen.class);
                 startActivity(intent);
                 finish();

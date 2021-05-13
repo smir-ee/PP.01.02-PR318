@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#424242">
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/weight"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:textColor="@color/purple"
+        android:fontFamily="@font/montserrat"/>
+    <EditText
+        android:id="@+id/editText"
+        android:textColorHint="@color/grey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="New value"
+        android:backgroundTint="@color/purple">
+    </EditText>
+</LinearLayout>

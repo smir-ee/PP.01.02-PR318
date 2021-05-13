@@ -22,4 +22,7 @@
         <item name="android:textColor">@drawable/rb_text_color</item>
         <item name="android:layout_margin">5dp</item>
     </style>
+    <style name="MyBodyDialog" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="colorAccent">@color/purple</item>
+    </style>
 </resources>

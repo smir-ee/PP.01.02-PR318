@@ -1,10 +1,14 @@
 package com.example.superfit.mainScreen;
 
 public class User {
-   private String name;
-   private String email;
-   private String code;
-   private boolean signedUp;
+    private String name;
+    private String email;
+    private String code;
+    private boolean signedUp;
+    private String weight = "Undefined";
+    private String height = "Undefined";
+
+
 
     public User(String name, String email, String code, boolean signedUp) {
         this.name = name;
@@ -43,6 +47,22 @@ public class User {
 
     public void setSignedUp(boolean signedUp) {
         this.signedUp = signedUp;
+    }
+
+    public String getWeight() {
+        return weight;
+    }
+
+    public String getHeight() {
+        return height;
+    }
+
+    public void setWeight(String weight) {
+        this.weight = weight + " kg";
+    }
+
+    public void setHeight(String height) {
+        this.height = height + " cm";
     }
 
 
