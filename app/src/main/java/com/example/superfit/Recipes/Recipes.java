@@ -53,6 +53,7 @@ public class Recipes extends AppCompatActivity {
     String search_request;
     Intent intent;
     List<String> names, calories, pfc;
+    List<Bitmap> images;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,6 +87,7 @@ public class Recipes extends AppCompatActivity {
                 intent.putExtra("Name", names.get(position));
                 intent.putExtra("Calories", calories.get(position));
                 intent.putExtra("PFC", pfc.get(position));
+                intent.putExtra("Image", images.get(position));
                 startActivity(intent);
             }
         });
@@ -167,6 +169,7 @@ public class Recipes extends AppCompatActivity {
                     calories = new ArrayList<>();
                     pfc = new ArrayList<>();
                     ingredients_array = new ArrayList<>();
+                    images = new ArrayList<>();
 
                     Object object = new JSONParser().parse(inputStreamReader);
                     JSONObject jsonObject = (JSONObject) object;
@@ -210,6 +213,7 @@ public class Recipes extends AppCompatActivity {
                                 names.add(data.get(i).getName());
                                 calories.add(data.get(i).getCalories());
                                 pfc.add(data.get(i).getProtein() + data.get(i).getFat() + data.get(i).getCarbs());
+                                images.add(data.get(i).getImage());
                             }
                             adapter = new RecipeAdapter(Recipes.this, R.layout.recipes_item, data);
                             adapter.notifyDataSetChanged();

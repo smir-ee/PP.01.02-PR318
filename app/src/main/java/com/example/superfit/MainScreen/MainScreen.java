@@ -65,4 +65,9 @@ public class MainScreen extends AppCompatActivity {
         Intent intent = new Intent(this, SignInActivity.class);
         startActivity(intent);
     }
+
+    public void onDetailsClick(View v){
+        Intent intent = new Intent(this, Details.class);
+        startActivity(intent);
+    }
 }

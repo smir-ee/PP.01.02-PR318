@@ -16,4 +16,12 @@ public final class SignUpContract {
         public final static String COLUMN_EMAIL = "email";
         public final static String COLUMN_CODE = "code";
     }
+
+    public static final class BodyParameters implements BaseColumns{
+        public static String TABLE_NAME = "body_parameters";
+
+        public final static String _ID = BaseColumns._ID;
+        public final static String COLUMN_WEIGHT = "weight";
+        public final static String COLUMN_HEIGHT = "height";
+    }
 }
